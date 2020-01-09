@@ -3,8 +3,12 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 require('./models/Product');
+require('dotenv').config();
+
+console.log(process.env);
 
 const app = express();
+const api_key = process.env.REACT_APP_API_KEY;
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI || `mongodb+srv://reviveproject:makers@cluster0-ezkvz.mongodb.net/test?retryWrites=true&w=majority`);

@@ -28,6 +28,7 @@ import productService from './services/productService';
 
 function App() {
   const [products, setproducts] = useState(null);
+  const api_key = process.env.REACT_APP_API_KEY;
 
   useEffect(() => {
     if(!products) {
