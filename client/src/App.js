@@ -24,7 +24,7 @@
 // }
 import React, { useState, useEffect } from "react";
 
-import productService from './services/productService';switch
+import productService from './services/productService';
 
 function App() {
   const [products, setproducts] = useState(null);
