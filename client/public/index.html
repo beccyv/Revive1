@@ -72,11 +72,21 @@
         var image = 'imagesmall.png'
         //adding a waitrose marker
         var marker = new google.maps.Marker({
-    position: waitrose,
-    map: map,
-    title: 'Waitrose',
-    icon: image
-  });
+          position: waitrose,
+          map: map,
+          title: 'Waitrose',
+          icon: image
+        });
+
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<h2>This is a test info window</h2>'
+        });
+
+        marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+
+
         infoWindow = new google.maps.InfoWindow;
 
         // Try HTML5 geolocation.
