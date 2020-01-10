@@ -1,0 +1,143 @@
+{
+  "address": [
+    {
+      "street": "76 Rivington Street",
+      "city": "London",
+      "country": "UK",
+      "opening-hour": "Monday to Friday 8.30am-6pm"
+    },
+    {
+    "street": "17 Great Eastern Street",
+    "postcode": "EC2A 3NT",
+    "city": "London",
+    "country": "United Kingdom",
+    "opening-hour": "Access: PAD-Anytime 24x7"
+  },
+  {
+  "street": "5 Appold Street",
+  "city": "London",
+  "postcode": "EC2A 2DA",
+  "country": "UK",
+  "opening-hour": "Access: PAD-Anytime 24x7"
+},
+  {
+    "street": "Hackney Britannia Project - Morgan Sindall",
+    "city": "London",
+    "postcode": "N1 5LA",
+    "country": "UK",
+    "opening-hour": "Access: PAD-Anytime 24x7"
+  },
+  {
+    "street": "46 Eagle Wharf Road",
+    "city": "London",
+    "postcode": "N1 7ED",
+    "country": "UK",
+    "opening-hour": "Limited Access Monday to Friday 8am-6pm"
+  },
+  {
+    "street": "1 Finsbury Avenue SRM",
+    "city": "London",
+    "postcode": "EC2M 2PA",
+    "country": "UK",
+    "opening-hour": "Access: PAD-Anytime 24x7"
+  },
+  {
+    "street": "135 Bishopsgate",
+    "city": "London",
+    "postcode": "EC2M 3YD",
+    "country": "UK",
+    "opening-hour": "Access: PAD-Anytime 24x7"
+  },
+  {
+    "street": "100 Liverpool Street, Broadgate Circle",
+    "city": "London",
+    "postcode": "EC2M 2RH",
+    "country": "UK",
+    "opening-hour": "Access: PAD-Anytime 24x7"
+  },
+  {
+    "street": "Eden House 23-25 Wilson Street",
+    "city": "London",
+    "postcode": "EC2M 2TE",
+    "country": "UK",
+    "opening-hour": "Access: PAD-Anytime 24x7"
+  },
+  {
+    "street": "Park House 16-18 Finsbury Circus",
+    "city": "London",
+    "postcode": "EC2M 7EB",
+    "country": "UK",
+    "opening-hour": "Limited Access 8am - 6pm Monday to Friday"
+  },
+  {
+    "street": "16th Floor Dashwood House Old Broad Street",
+    "city": "London",
+    "postcode": "EC2M 1QS",
+    "country": "UK",
+    "opening-hour": "Limited Access 9am - 5pm Monday to Friday"
+  },
+  {
+    "street": "Imagile Group, 3rd Floor, 10 New Street",
+    "city": "London",
+    "postcode": "EC2M 4TP",
+    "country": "UK",
+    "opening-hour": "Limited Access 09:00-17:00"
+  },
+  {
+    "street": "Richer Sounds, Shop Floor, 44 Artillery Lane",
+    "city": "London",
+    "postcode": "E1 7LS",
+    "country": "UK",
+    "opening-hour": "Limited Access 12pm - 6pm 7 days a week"
+  },
+  {
+    "street": "Coventry University London, Ground floor, University House, Middlesex Street",
+    "city": "London",
+    "postcode": "E1 7JF",
+    "country": "UK",
+    "opening-hour": "imited Access 7am - 10pm (Mon-Fri) / 1pm-7pm Sat access / No Sun access"
+  },
+  {
+    "street": "Adstream UK Ltd, 20-22 Commercial Stret",
+    "city": "London",
+    "postcode": "E1 6LP",
+    "country": "UK",
+    "opening-hour": "Limited Access Monday to Friday 8.30am-6pm: Ground Floor Kitchen"
+  },
+  {
+    "street": "Higgins Homes, Hemming Street",
+    "city": "London",
+    "postcode": "E1 5BW",
+    "country": "UK",
+    "opening-hour": "Limited Access Monday to Friday 7.30am-5pm"
+  },
+  {
+    "street": "Mile End Hospital, Accelerate Clinic, Bancroft Road",
+    "city": "London",
+    "postcode": "E1 4DG",
+    "country": "UK",
+    "opening-hour": "Limited Access Monday to Friday 9am-5pm"
+  },
+  {
+    "street": "St George City, Project Office, 9 Pennington Street",
+    "city": "London",
+    "postcode": "E1W 2BD",
+    "country": "UK",
+    "opening-hour": "Limited Access Monday to Saturday,closed Sundays"
+  },
+  {
+    "street": "CFIELD CONSTRUCTION, ROSSENDALE STREET, CAZENOVE",
+    "city": "London",
+    "postcode": "E5 8TA",
+    "country": "UK",
+    "opening-hour": "Limited Access Mon to Fri 8AM -6PM"
+  },
+  {
+    "street": "oyal Mint Gardens, Midgard Ltd, Construction Site Royal Mint Street",
+    "city": "London",
+    "postcode": "E1 8LG",
+    "country": "UK",
+    "opening-hour": "Access: PAD-Anytime 24x7"
+  }
+  ]
+}
