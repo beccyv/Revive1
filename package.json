@@ -24,8 +24,11 @@
   "homepage": "https://github.com/beccyv/Revive1#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.4.1",
     "express": "^4.17.1",
+    "jquery": "^3.4.1",
     "mongoose": "^5.8.5",
+    "popper.js": "^1.16.0",
     "react-native-phone-call": "^1.0.9"
   },
   "devDependencies": {

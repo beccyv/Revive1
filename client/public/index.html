@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -15,9 +17,17 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+
+    <!--****fontawesome cdn link*******-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!--***************<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />-->
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
+       @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+
       #map {
         height: 100%;
       }
@@ -26,6 +36,15 @@
         height: 100%;
         margin: 0;
         padding: 0;
+      }
+
+      html{
+        scroll-behavior: smooth;
+      }
+
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        #map {width:100vw}
       }
     </style>
     <!--
@@ -37,12 +56,12 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Revive App</title>
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 60%;
+        height: 75%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -56,12 +75,29 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
-    <a href="tel:777" class="phoneMe">Call Now!</a>
-    <table>
-     <tr onclick="window.open('tel:777');">
-      <td>Phone: 777</td>
-     </tr>
-    </table>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="position:fixed; width:100%;">
+  <a class="navbar-brand" href="#" style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size:30px; color:red;">Revive</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="#map">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#information">information</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#instructions">aed Instructions</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 
     <!--
       This HTML file is a template.
@@ -73,7 +109,8 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <div id="map"></div>
+  </br>
+    <div id="map" style="width:100vw;"></div>
     <script>
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
@@ -189,5 +226,101 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=%REACT_APP_API_KEY%&callback=initMap">
     </script>
+
+  </br>
+  </br>
+  </br>
+
+    <div class="container marketing">
+
+      <!-- Three columns of image and text  -->
+      <div class="row">
+        <div class="col-lg-3">
+          <a href="tel:777" class="phoneMe"><i class="fa fa-phone fa-5x"></i></a>
+          <p>In an emergency call 999</p>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="row">
+
+          <table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Address</th>
+      <th scope="col"></th>
+      <th scope="col">Distance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>123 Makers Ave, London, EC1 2AB</td>
+      <td></td>
+      <td>0.3 miles</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>123 Makers Ave, London, EC1 2AB</td>
+      <td></td>
+      <td>0.5 miles</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>123 Makers Ave, London, EC1 2AB</td>
+      <td></td>
+      <td>1.3 miles</td>
+    </tr>
+  </tbody>
+</table>
+
+        </div><!-- /.col-lg-4 -->
+
+        <!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+<!--Content and image-->
+</br>
+</br>
+</br>
+      <div class="row featurette" id ="information">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5">
+            <img src="aed_monitor.jpg" width="500px" height="500px">
+          </div>
+        </div>
+
+
+
+        <!--Content and vid-->
+      </br>
+      </br>
+      </br>
+            <div class="row featurette" id="instructions">
+                <div class="col-md-7">
+                  <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+                  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+                <div class="col-md-5">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/3trpw_We0UQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <img src="step-1-AED-img.png" width="200px" height="200px">
+
+      </br>
+      </br>
+      </br>
+      <footer  style ="background-color:grey; color:white; width:100%">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright
+  </div>
+      </footer>
+    <!--***********<script type="text/javascript" src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="node_modules/tether/dist/js/tether.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
   </body>
 </html>
