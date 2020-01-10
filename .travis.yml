@@ -4,7 +4,7 @@ node_js:
  - "node"
 
 script:
- - npm run dev
+ - npm run dev && npm run test
 
 # script: npm run test
 
