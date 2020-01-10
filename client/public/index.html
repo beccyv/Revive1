@@ -91,7 +91,7 @@
         //creating a waitrose variable with its location
         var coords = {lat: 51.524190, lng: -0.102580};
         var image = 'heart2.svg'
-        var image2 = 'locationdotsmall  .svg'
+        var image2 = 'locationdotsmall.svg'
         //adding a waitrose marker
         // var marker = new google.maps.Marker({
         //   position: waitrose,
@@ -107,15 +107,36 @@
         // marker.addListener('click', function(){
         //     infoWindow.open(map, marker);
         //   });
-        addMarker({lat: 51.524190, lng: -0.102580});
+        addMarker({
+          coords:{lat: 51.524190, lng: -0.102580},
+          content: 'Waitrose, made up address, near Deloitte Digital'
+        });
+        addMarker({
+          coords:{lat: 51.520161, lng: -0.103530},
+          content: 'Farringdon Station, Cowcross St, EC1M 6BY'
+        });
+        addMarker({
+          coords:{lat: 51.523610, lng: -0.097640},
+          content: '<p>2-4 Old Street</p><p>London EC1V<p></p> 9AA</p>'
+        });
 
-        function addMarker(coords){
+
+        function addMarker(props){
           var marker = new google.maps.Marker({
-            position: coords,
+            position: props.coords,
             map: map,
             title: 'Waitrose',
             icon: image
           });
+          if (props.content){
+            var infoWindow = new google.maps.InfoWindow({
+              content: props.content
+            });
+
+            marker.addListener('click', function(){
+                infoWindow.open(map, marker);
+              });
+          }
         }
 
         function addGeoMarker(coords){
