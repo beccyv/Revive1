@@ -126,23 +126,64 @@
           zoom: 16
         });
         //creating a waitrose variable with its location
-        var waitrose = {lat: 51.524190, lng: -0.102580};
-        var image = 'imagesmall.png'
+        var coords = {lat: 51.524190, lng: -0.102580};
+        var image = 'heart2.svg'
+        var image2 = 'locationdotsmall.svg'
         //adding a waitrose marker
-        var marker = new google.maps.Marker({
-          position: waitrose,
-          map: map,
-          title: 'Waitrose',
-          icon: image
+        // var marker = new google.maps.Marker({
+        //   position: waitrose,
+        //   map: map,
+        //   title: 'Waitrose',
+        //   icon: image
+        // });
+        //
+        // var infoWindow = new google.maps.InfoWindow({
+        //   content: '<h2>This is a test info window</h2>'
+        // });
+        //
+        // marker.addListener('click', function(){
+        //     infoWindow.open(map, marker);
+        //   });
+        addMarker({
+          coords:{lat: 51.524190, lng: -0.102580},
+          content: 'Waitrose, made up address, near Deloitte Digital'
+        });
+        addMarker({
+          coords:{lat: 51.520161, lng: -0.103530},
+          content: 'Farringdon Station, Cowcross St, EC1M 6BY'
+        });
+        addMarker({
+          coords:{lat: 51.523610, lng: -0.097640},
+          content: '<p>2-4 Old Street</p><p>London EC1V<p></p> 9AA</p>'
         });
 
-        var infoWindow = new google.maps.InfoWindow({
-          content: '<h2>This is a test info window</h2>'
-        });
 
-        marker.addListener('click', function(){
-            infoWindow.open(map, marker);
+        function addMarker(props){
+          var marker = new google.maps.Marker({
+            position: props.coords,
+            map: map,
+            title: 'Waitrose',
+            icon: image
           });
+          if (props.content){
+            var infoWindow = new google.maps.InfoWindow({
+              content: props.content
+            });
+
+            marker.addListener('click', function(){
+                infoWindow.open(map, marker);
+              });
+          }
+        }
+
+        function addGeoMarker(coords){
+          var marker = new google.maps.Marker({
+            position: coords,
+            map: map,
+            icon: image2,
+          });
+        }
+
 
 
         infoWindow = new google.maps.InfoWindow;
@@ -154,6 +195,7 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
+            addGeoMarker(pos)
 
             infoWindow.setPosition(pos);
             //This is to set the wording on the marker
@@ -163,6 +205,7 @@
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
+
         } else {
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
