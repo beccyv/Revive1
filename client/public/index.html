@@ -113,6 +113,8 @@
     -->
   </br>
     <div id="map" style="width:100vw;"></div>
+    <!-- addition of a directionsPanel into the main html - would need to be styled -->
+    <div id="directionsPanel" style="float:right;width:30%;height 100%"></div>
     <script>
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
@@ -133,18 +135,20 @@
         var directionsRenderer = new google.maps.DirectionsRenderer();
         directionsRenderer.setMap(map);
 
-        function calcRoute() {
+        //matches with the directionsPanel div outside of the script tag
+        directionsRenderer.setPanel(document.getElementById('directionsPanel'));
+
+        function calcRoute(destination) {
           var request = {
-            origin: {lat: 51.440800, lng: -0.119610},
-            destination: {lat: 51.510910, lng: -0.086440},
+            origin: {lat: 51.524190, lng: -0.102580},
+            destination: destination,
             travelMode: 'WALKING',
           };
           directionsService.route(request, function(result) {
+              //without the setPanel, just see a line which represents the journey
               directionsRenderer.setDirections(result);
           });
         }
-
-        calcRoute();
 
         //creating a waitrose variable with its location
         var coords = {lat: 51.524190, lng: -0.102580};
@@ -193,6 +197,7 @@
 
             marker.addListener('click', function(){
                 infoWindow.open(map, marker);
+                calcRoute(props.coords);
               });
           }
         }
@@ -204,8 +209,6 @@
             icon: image2,
           });
         }
-
-
 
         infoWindow = new google.maps.InfoWindow;
 
@@ -240,6 +243,7 @@
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
+
 
     </script>
     <script async defer
