@@ -127,6 +127,25 @@
           center: {lat: -34.397, lng: 150.644},
           zoom: 16
         });
+
+        //adding directions
+        var directionsService = new google.maps.DirectionsService();
+        var directionsRenderer = new google.maps.DirectionsRenderer();
+        directionsRenderer.setMap(map);
+
+        function calcRoute() {
+          var request = {
+            origin: {lat: 51.440800, lng: -0.119610},
+            destination: {lat: 51.510910, lng: -0.086440},
+            travelMode: 'WALKING',
+          };
+          directionsService.route(request, function(result) {
+              directionsRenderer.setDirections(result);
+          });
+        }
+
+        calcRoute();
+
         //creating a waitrose variable with its location
         var coords = {lat: 51.524190, lng: -0.102580};
         var image = 'heart2.svg'
@@ -220,10 +239,8 @@
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
-
-
-
       }
+
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=%REACT_APP_API_KEY%&callback=initMap">
