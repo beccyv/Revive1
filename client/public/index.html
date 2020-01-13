@@ -20,6 +20,9 @@
 <!--
     /* This is the axios link */ -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--
+
+
 
     <!--****fontawesome cdn link*******-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -114,50 +117,44 @@
   </br>
     <div id="map" style="width:100vw;"></div>
     <script>
+    /* This is the json link link */ -->
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
 
+      //importing the json data:
+
+
+
       //var map is the name of the map. If we have more than one map we will call them diff names to make them work.
       var map, infoWindow;
+      //1
       function initMap() {
-
+        //2
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
+          center: {lat: -51.520161, lng: 51.520161},
           zoom: 16
         });
+        //1
         //creating a waitrose variable with its location
-        var coords = {lat: 51.524190, lng: -0.102580};
         var image = 'heart2.svg'
         var image2 = 'locationdotsmall.svg'
-        //adding a waitrose marker
-        // var marker = new google.maps.Marker({
-        //   position: waitrose,
-        //   map: map,
-        //   title: 'Waitrose',
-        //   icon: image
-        // });
-        //
-        // var infoWindow = new google.maps.InfoWindow({
-        //   content: '<h2>This is a test info window</h2>'
-        // });
-        //
-        // marker.addListener('click', function(){
-        //     infoWindow.open(map, marker);
-        //   });
-        addMarker({
-          coords:{lat: 51.524190, lng: -0.102580},
-          content: 'Waitrose, made up address, near Deloitte Digital'
-        });
+
+
+
         addMarker({
           coords:{lat: 51.520161, lng: -0.103530},
-          content: 'Farringdon Station, Cowcross St, EC1M 6BY'
+          content: 'Farringdon Station, Cowcross St, London, EC1M 6BY'
         });
         addMarker({
           coords:{lat: 51.523610, lng: -0.097640},
-          content: '<p>2-4 Old Street</p><p>London <p></p>EC1V 9AA</p>'
+          content: '2-4 Old Street, London, EC1V 9AA</p>'
         });
+
+
+
+
 
 
         function addMarker(props){
@@ -165,11 +162,14 @@
             position: props.coords,
             map: map,
             title: 'Waitrose',
-            icon: image
+            icon: image,
+
           });
           if (props.content){
             var infoWindow = new google.maps.InfoWindow({
-              content: props.content
+              content: props.content,
+              maxWidth: 150
+
             });
 
             marker.addListener('click', function(){
@@ -177,12 +177,12 @@
               });
           }
         }
-
         function addGeoMarker(coords){
           var marker = new google.maps.Marker({
             position: coords,
             map: map,
             icon: image2,
+            animation: google.maps.Animation.BOUNCE,
           });
         }
 
@@ -198,7 +198,6 @@
               lng: position.coords.longitude
             };
             addGeoMarker(pos)
-
             infoWindow.setPosition(pos);
             //This is to set the wording on the marker
             infoWindow.setContent('You are here');
@@ -208,47 +207,99 @@
             handleLocationError(true, infoWindow, map.getCenter());
           });
 
-        } else {
+        }
+        else {
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
         }
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+          infoWindow.setPosition(pos);
+          infoWindow.setContent(browserHasGeolocation ?
+                                'Error: The Geolocation service failed.' :
+                                'Error: Your browser doesn\'t support geolocation.');
+          infoWindow.open(map);
+        }
       }
 
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
+
+      // This is the part related to geocoding
+      // calling the geocode function
 
 
 
-      }
+        geocode('treehouse goswell road london')
+
+            function geocode(location){
+
+            axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+                params:{
+                  address:location,
+                  key:'%REACT_APP_API_KEY%'
+                }
+              })
+//               // to here
+//               // .then(result => {
+//               //   // console.log(result);
+//               //   // console.log(response.data.results[0].formatted_address);
+//               //   console.log('hi')
+//               // })
+//
+//               // .then(data =>{
+//               //   // var lat = data.results[0].geometry.location.lat
+//               //   // console.log(lat)
+//               //   // console.log(data)
+//               //   response.json({ message: 'Request received!', data })
+//               // })
+//               //use this
+              .then(function(response){
+                console.log(response.data.results[0].formatted_address);
+                console.log({lat:response.data.results[0].geometry.location.lng, lng:response.data.results[0].geometry.location.lat});
+                var formatted_address = response.data.results[0].formatted_address
+                var latAndLong = {lat:response.data.results[0].geometry.location.lng, lng:response.data.results[0].geometry.location.lat}
+                var image = 'heart2.svg'
+                var marker = new google.maps.Marker({
+                  map: map,
+                  position: response.data.results[0].geometry.location,
+                  icon: image
+
+            });
+            if (response.data.results[0].formatted_address){
+              var infoWindow = new google.maps.InfoWindow({
+                content: response.data.results[0].formatted_address,
+                maxWidth: 150
+
+              });
+
+              marker.addListener('click', function(){
+                  infoWindow.open(map, marker);
+                });
+            }
+
+
+              })
+              .catch(function(error){
+                console.log()
+              });
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=%REACT_APP_API_KEY%&callback=initMap">
     </script>
     <script>
-    //This is the part related to geocoding
-    // calling the geocode function
 
-    geocode();
-    // and here is the function
-    function geocode(){
-      var location = 'clerkenwell London UK';
-    axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
-        params:{
-          address:location,
-          key:'%REACT_APP_API_KEY%'
-        }
-      })
-      .then(function(response){
-        console.log(response);
-      })
-      .catch(function(error){
-        console.log()
-      });
-    }
     </script>
 
   </br>
