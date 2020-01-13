@@ -147,6 +147,8 @@
           directionsService.route(request, function(result) {
               //without the setPanel, just see a line which represents the journey
               directionsRenderer.setDirections(result);
+              var time = result.routes[0].legs[0].duration.text
+              console.log(time)
           });
         }
 
