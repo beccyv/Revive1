@@ -118,10 +118,26 @@
     <div id="map" style="width:100vw;"></div>
     <!-- addition of a directionsPanel into the main html - would need to be styled -->
    <div id="directionsPanel" style="float:right;width:30%;height 100%"></div>
-   <script type="text/javascript" src="address.json"></script>
+   <!-- <script type="text/javascript" src="address.json"></script> -->
     <script>
 
-    console.log(address)
+    fetch('address.json')
+    .then(function(response){
+      response.json().then (function(data){
+        console.log(data);
+        console.log(data.address[0].street);
+        console.log(data.address.length)
+        for (i = 0; i < data.address.length; i++) {
+          geocode(data.address[i].street)
+      }
+
+      })
+    })
+
+    //here is the javascript loop
+
+
+
     /* This is the json link link */ -->
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
@@ -254,9 +270,9 @@
       // This is the part related to geocoding
       // calling the geocode function
 
+        
 
 
-        geocode('treehouse goswell road london')
 
             function geocode(location){
 
@@ -281,9 +297,8 @@
 //               // })
 //               //use this
               .then(function(response){
-                console.log(response)
-                console.log(response.data.results[0].formatted_address);
-                console.log({lat:response.data.results[0].geometry.location.lng, lng:response.data.results[0].geometry.location.lat});
+                console.log('Success')
+
                 var formatted_address = response.data.results[0].formatted_address
                 var latAndLong = {lat:response.data.results[0].geometry.location.lng, lng:response.data.results[0].geometry.location.lat}
                 var image = 'heart2.svg'
@@ -302,6 +317,7 @@
 
               marker.addListener('click', function(){
                   infoWindow.open(map, marker);
+                  calcRoute(response.data.results[0].formatted_address);
                 });
             }
 
@@ -310,6 +326,8 @@
               .catch(function(error){
                 console.log()
               });
+
+
 
 
             }
