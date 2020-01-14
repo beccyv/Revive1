@@ -199,8 +199,6 @@ function initMap() {
   var image = 'heart3.svg'
   var image2 = 'locationdotsmall.svg'
 
-
-
   // addMarker({
   //   coords:{lat: 51.520161, lng: -0.103530},
   //   content: 'Farringdon Station, Cowcross St, London, EC1M 6BY'
@@ -209,11 +207,6 @@ function initMap() {
   //   coords:{lat: 51.523610, lng: -0.097640},
   //   content: '2-4 Old Street, London, EC1V 9AA</p>'
   // });
-
-
-
-
-
 
   // function addMarker(props){
   //   var marker = new google.maps.Marker({
@@ -256,8 +249,6 @@ function initMap() {
       };
       addGeoMarker(pos);
       infoWindow.setPosition(pos);
-
-      console.log('hello', pos)
       //This is to set the wording on the marker
       infoWindow.setContent('You are here');
       infoWindow.open(map);
@@ -265,18 +256,12 @@ function initMap() {
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
     });
-
   }
   else {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
-//
-// console.log(new_array[1])
-// console.log(new_array[0])
-// console.log(new_array)
-// console.log('hi')
-// console.log(pos)
+
   function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
@@ -285,74 +270,40 @@ function initMap() {
       infoWindow.open(map);
     }
 
+  function geocode(location){
 
+    axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+      params:{
+        address:location,
+        key:'%REACT_APP_API_KEY%'
+      }
+    })
 
-     function geocode(location){
+    .then(function(response){
+      var formatted_address = response.data.results[0].formatted_address
+      var image = 'heart2.svg'
+      var marker = new google.maps.Marker({
+        map: map,
+        position: response.data.results[0].geometry.location,
+        icon: image
+      });
 
-      axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
-        params:{
-          address:location,
-          key:'%REACT_APP_API_KEY%'
-        }
-      })
-
-
-
-
-      .then(function(response){
-        var formatted_address = response.data.results[0].formatted_address
-        var image = 'heart2.svg'
-        var marker = new google.maps.Marker({
-          map: map,
-          position: response.data.results[0].geometry.location,
-          icon: image
-
+      if (response.data.results[0].formatted_address){
+        var infoWindow = new google.maps.InfoWindow({
+          content: response.data.results[0].formatted_address,
+          maxWidth: 150
         });
-
-
-        if (response.data.results[0].formatted_address){
-          var infoWindow = new google.maps.InfoWindow({
-            content: response.data.results[0].formatted_address,
-            maxWidth: 150
-
-          });
-
           marker.addListener('click', function(){
             infoWindow.open(map, marker);
             calcRoute(response.data.results[0].geometry.location);
-
-
           });
         }
-
-
       })
       .catch(function(error){
         console.log()
       });
-
-
     }
-
-
-
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   </script>
   <script async defer
