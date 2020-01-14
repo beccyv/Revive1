@@ -63,6 +63,11 @@ Learn how to configure a non-root public URL by running `npm run build`.
 -->
 <title>Revive App</title>
 <style>
+/* #map div {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+} */
 /* Always set the map height explicitly to define the size of the div
 * element that contains the map. */
 #map {
@@ -179,13 +184,14 @@ function initMap() {
     directionsService.route(request, function(result) {
       //without the setPanel, just see a line which represents the journey
       directionsRenderer.setDirections(result);
+
     });
   }
 
   //Marianne's code ended here
 
   //creating a waitrose variable with its location
-  var image = 'heart2.svg'
+  var image = 'heart3.svg'
   var image2 = 'locationdotsmall.svg'
 
 
