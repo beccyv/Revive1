@@ -2,10 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <!--*********Favicon icon link to manifest.json**********-->
+    <link rel="icon" href="%PUBLIC_URL%/heart-favicon.ico" />
 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -28,9 +30,9 @@
        * element that contains the map. */
        @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
 
-      #map {
+      /* #map {
         height: 100%;
-      }
+      } */
       /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
@@ -42,9 +44,37 @@
         scroll-behavior: smooth;
       }
 
+      a:hover {
+  color: hotpink;
+}
+
+      /* .phone_anim{
+        animation: shake 5s infinite;
+      }
+
+      .phone_anim:hover {
+  background-color: yellow;
+}
+
+      @keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+} */
+
       /* Extra small devices (phones, 600px and down) */
       @media only screen and (max-width: 600px) {
-        #map {width:100vw}
+        #map {width:100vw;
+          height: 85vh;
+        }
       }
     </style>
     <!--
@@ -56,19 +86,14 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Revive App</title>
+    <title>Revive</title>
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
         height: 75%;
       }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+
     </style>
   </head>
   <body>
@@ -76,9 +101,10 @@
     <div id="root"></div>
 
 
+<!--***************** Nav bar************************-->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="position:fixed; width:100%;">
-  <a class="navbar-brand" href="#" style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size:30px; color:red;">Revive</a>
+  <img src="heart-logo-1.png" width="30px" height="30px"><a class="navbar-brand" href="#" style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size:30px; color:red;">Revive</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -89,14 +115,24 @@
         <a class="nav-link" href="#map">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#information">information</a>
+        <a class="nav-link" href="#instructions">Instructions</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#instructions">aed Instructions</a>
+        <a class="nav-link" href="#instruction_video">Instruction Video</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#buy_aed">Buy a Defibrilator</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#aed_form">Form</a>
       </li>
     </ul>
-  </div>
-</nav>
+      <span class="navbar-text" style="color:red; font-size:22px">
+        Locate your nearest defibrilator.
+      </span>
+    </div>
+  </nav>
+
 
 
     <!--
@@ -109,8 +145,11 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+<!--*************** Main Body **************** -->
+
   </br>
-    <div id="map" style="width:100vw;"></div>
+    <div id="map"></div>
     <script>
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
@@ -184,100 +223,279 @@
     src="https://maps.googleapis.com/maps/api/js?key=%REACT_APP_API_KEY%&callback=initMap">
     </script>
 
+  <!-- </br>
   </br>
-  </br>
-  </br>
+  </br> -->
 
-    <div class="container marketing">
+    <div class="container ">
 
-      <!-- Three columns of image and text  -->
-      <div class="row">
+      <!-- Two columns in row <i class="fa fa-phone fa-5x"></i>-->
+      <div class="row" style="margin-top:5%;">
         <div class="col-lg-3">
-          <a href="tel:777" class="phoneMe"><i class="fa fa-phone fa-5x"></i></a>
-          <p>In an emergency call 999</p>
-        </div><!-- /.col-lg-4 -->
 
-        <div class="row">
+          <center><a href="tel:777" class="phoneMe">
+            <!--Phone icon-->
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="65" height="65"
+            viewBox="0 0 172 172"
+            style=" fill:#000000; ><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path class="phone_anim" d="M0,172v-172h172v172z" fill="none"></path><g fill="#f6240f"><path d="M148.09676,119.25781c-10.23317,-8.76022 -20.64724,-14.08353 -30.75121,-5.32332l-6.04687,5.27163c-4.41887,3.85037 -12.63642,21.78426 -44.39544,-14.78125c-31.75901,-36.48798 -12.86899,-42.17308 -8.42428,-45.97175l6.07272,-5.29748c10.05228,-8.76021 6.2536,-19.79447 -1.00781,-31.16466l-4.36719,-6.8738c-7.28726,-11.31851 -15.2464,-18.76081 -25.32452,-10.02644l-5.45253,4.78065c-4.47055,3.23017 -16.92608,13.79928 -19.94952,33.85216c-3.64363,24.05829 7.85577,51.63101 34.13642,81.86538c26.25481,30.26022 51.99279,45.45493 76.33534,45.19651c20.23377,-0.23257 32.48257,-11.08594 36.30709,-15.03966l5.45253,-4.78065c10.07812,-8.73438 3.82452,-17.64964 -6.4345,-26.40986z"></path></g></g></svg></a></center>
 
-          <table class="table">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Address</th>
-      <th scope="col"></th>
-      <th scope="col">Distance</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>123 Makers Ave, London, EC1 2AB</td>
-      <td></td>
-      <td>0.3 miles</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>123 Makers Ave, London, EC1 2AB</td>
-      <td></td>
-      <td>0.5 miles</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>123 Makers Ave, London, EC1 2AB</td>
-      <td></td>
-      <td>1.3 miles</td>
-    </tr>
-  </tbody>
-</table>
+            <p></p>
+            <b class="emergency-call" style="font-size:19px;"><center>In an emergency click the phone icon to call 999<center></b>
+            </br>
+            <p id="these3words_location"style="font-size:18px">If you don't know your location quote this location number ....to your 999 operator so they can find you quickly.</p>
+        </div><!-- End of column 1 in row -->
 
-        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-9" style=""><!--Second column-->
 
-        <!-- /.col-lg-4 -->
-      </div><!-- /.row -->
+        </br>
+        </br>
+          <!--Table to display address and distance of defibrilators-->
+          <center><table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Address</th>
+                <th scope="col"></th>
+                <th scope="col">Distance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>123 Makers Ave, London, EC1 2AB</td>
+                <td></td>
+                <td>0.3 miles</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>123 Makers Ave, London, EC1 2AB</td>
+                <td></td>
+                <td>0.5 miles</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>123 Makers Ave, London, EC1 2AB</td>
+                <td></td>
+                <td>1.3 miles</td>
+              </tr>
+            </tbody>
+          </table>
+          <!--End of table-->
+          </br>
+          </br>
+        </div>
+      </div><!-- End of section -->
+
+
+      <div class="row featurette" id="" style="background-color: #FFE6E5; padding:5%;">
+        <h3 class="lead"><b>How do defibrillators help and When do you use them?</b></h3>
+        <p class="lead">A person having a heart attack is usually still conscious and breathing. If a heart attack isn’t treated, it can lead to a cardiac arrest. When a person is under cardiac arrest they are unresponsive and they are not breathing.</p>
+        <br>
+        <p class="lead"><b>How does CPR help?</b></p>
+        <p class="lead">By performing chest compressions and rescue breaths, you are taking over the role of their heart and lungs, pumping blood and oxygen around their body.</p>
+        <br>
+        <p class="lead"><b>What does a defibrillator do?<b></p>
+        <p class="lead">When a person has a cardiac arrest a defibrillator can be used to shock the heart back into a normal rhythm.</p>
+      </div>
+</br>
+</br>
+</br>
+
+
+<!--******************* Emergency Instructions ***************************-->
+
+
+                <div class="row lead" style="padding:2%" id="instructions">
+                  <h3>Performing CPR and Using the Defibrilator </h3>
+                  <p>Shake and shout at casualty if the victim is unresponsive and breathing abnormally or not breathing at all, dial 999 to call the emergency services.</p>
+                  </br>
+
+
+
+                  <h4>CPR</h4>
+                  <p>Place the heel of one hand in the centre of their chest. Place your other hand on top of the first. Interlock your fingers.
+                    use the heel of your hand to push the breastbone down firmly and smoothly and release. Do this at a rate of 2 compressions per second.</p>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-sm">
+                          <img src="cpr-hand-position.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                        <div class="col-sm">
+                          <img src="cpr.jpeg" class="img-fluid" alt="Responsive image">
+                        </div>
+                      </div>
+                    </div>
+                    <h4>Mouth to Mouth</h4>
+                    <p>Then give two rescue breaths. Open the airway again by tilting the head back and lifting the chin. Pinch the soft part of the person’s nose closed.
+                      Take a normal breath, make a seal around their mouth and breathe out steadily.
+                      The person’s chest should rise and fall. Keeping the person’s head back and the chin lifted.</p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                        <img src="cpr_mouth-to-mouth.jpg" class="img-fluid" alt="Responsive image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </br>
+            </br>
+
+                <h3> Using the Defibrilator</h3>
+                <div class="row lead">
+                    <p>1.Turn on the aed. Bare victims chest.</p>
+                  <img src="step-1-AED-instruction.png" class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="row lead" style="padding:2%">
+                  <p>2.Apply electrode pads by removing the backing paper and adhering them to the victims chest. Ensure the pads stick to the victims chest by pushing them firmly on.
+                </div>
+                <div class="row text-center">
+                  <img src="step-2-AED-instruction.png" class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="row lead" style="padding:2%">
+                  <p>3.The first pad should be on the upper right side below the collar bone.
+                    The second pad should be on the casualty’s left side below the arm pit. Follow AED voice commands until emergency medical personnel arrive.</p>
+                </div>
+                <div class="row">
+                  <center><img src="step-3-AED-instructions.png" class="img-fluid" alt="Responsive image"></center>
+                </div>
+                <div class="row lead" style="padding:2%">
+                  <p>4.If the casualty shows signs of becoming responsive, such as coughing, opening eyes or speaking, and starts to breathe normally, put them in the recovery position. Leave the defibrillator attached. Monitor their level of response and prepare to give CPR again if necessary.</p>
+                </div>
+                <div class="row">
+                  <img src="step-4-AED-instruction.jpg" class="img-fluid" alt="Responsive image">
+                </div>
+            </br>
+              <source style="font-size:8px;">sourced from: https://www.pulsepoint.org/pulsepoint-aed/ </br> https://www.sja.org.uk/get-advice/first-aid-advice/how-to/how-to-use-a-defibrillator/</source>
+            </div>
+
+
+
+            <!--Content and vid-->
+            </br>
+            </br>
+            </br>
+                <div class="row featurette" id="instruction_video" style="background-color: #EBECF0; padding:5%;">
+                    <div class="col-md-7">
+                      <h2 class="featurette-heading">How To Use A Defibrilator Video <span class="text-muted">The Importance of Early Defibrilation</span></h2>
+                      <p class="lead">
+                        Early defibrilation is crucial within 3–5 min of collapse can produce survival rates as high as 50–70%. This can be achieved through public access defibrillation. For every minute someone is in cardiac arrest without CPR and access to a defibrillator, their chances of survival drops by up to 10%.
+                      </p>
+
+                    </div>
+                    <div class="col-md-5">
+
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YbjcCjSNvUY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+
+
 
 <!--Content and image-->
-</br>
-</br>
-</br>
-      <div class="row featurette" id ="information">
+
+      <div class="row featurette" id ="buy_aed" style="padding:5%;">
           <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
+            <h2 class="featurette-heading">Buying a Defibrilator <span class="text-muted">For Schools and Businesses.</span></h2>
+            <p class="lead">It is encouraged that all workplaces, schools, and public buildings have a defibrillator on site. Defibrillators can cost anywhere between £1,280 - £1,500. It is strongly advised that you DO NOT buy a second hand defibrillator and that you go to a trusted verified retailer. Please click
+              <a href="https://giftshop.bhf.org.uk/defibrillators" target="_blank">here</a> to buy a defibrilator from the British Heart Foundation or <a href="https://www.heartsafe.org.uk/Buy" target="_blank">here</a> from Heartsafe.</p>
+
+            <h4 class="featurette-heading">Funding to Buy a Defibrilator</h4>
+            <p class="lead">The British Heart Foundation offer part funding if you are a  social club, church, resident group, resident,
+              you can check if you meet their criteria
+              <a href=“https://www.bhf.org.uk/how-you-can-help/how-to-save-a-life/defibrillators/apply-for-a-public-access-defibrillator”> learn more.</a>
+            </p>
+      </div>
           <div class="col-md-5">
-            <img src="aed_monitor.jpg" width="500px" height="500px">
+            <!--<img src="aed_monitor.jpg" width="500px" height="500px">-->
+            <img src="aed_monitor.jpg" class="img-fluid" alt="Responsive image">
           </div>
         </div>
 
 
 
-        <!--Content and vid-->
-      </br>
-      </br>
-      </br>
-            <div class="row featurette" id="instructions">
-                <div class="col-md-7">
-                  <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-                  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                </div>
-                <div class="col-md-5">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/3trpw_We0UQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-              </div>
 
-              <img src="step-1-AED-img.png" width="200px" height="200px">
+
+<!--*************** Form Section******************-->
+            <div class="container">
+
+                <h2>Add the Location of Defibrilator that is not on our site</h2>
+                <p class="lead">There is no legal responsibility for Business owners or any place with public access to defibrillators to ensure that their device is listed with the ambulance service. There is a chance that the emergency service may not have knowledge of all the locations for defibrillators.
+                  For this reason we recommend that you report any unlisted defibrillators that not on our site.</p>
+                <p class="lead">We recommend that when you report the unlisted defibrilator that you complete as much of the form detail as possible.Your contribution could potentially help save a life. </p>
+
+                <!--****** Form ******-->
+                <form style="padding:3%;background-color: #FFE6E5;" action="mailto:anywebsite@hotmail.com" id="aed_form"><!--EBECF0-->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputName4">Name</label>
+                          <input type="email" class="form-control" id="inputName4">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                          </div>
+                      </div>
+                  <div class="form-group">
+                    <label for="inputAddress">Location of Defibrilator</label>
+                    <input type="text" class="form-control" id="inputAddressBuilding4" placeholder="Building name and floor">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress2">Door number and Street Name</label>
+                    <input type="text" class="form-control" id="inputAddressStreet4" placeholder="">
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputCity">Town/City</label>
+                      <input type="text" class="form-control" id="inputCity4">
+                    </div>
+                    <div class="form-group col-md-3">
+                      <label for="inputCode">Postcode</label>
+                      <input type="text" class="form-control" id="inputPostcode4">
+                    </div>
+                  </div>
+
+                 <div class="form-row">
+                        <div class="form-group col-md-3">
+                          <label for="inputName4">Type of Defibrilator</label>
+                          <input type="text" class="form-control" id="inputDefibType4">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputEmail4">Moddel Number</label>
+                            <input type="text" class="form-control" id="inputDefibModelNo">
+                          </div>
+                          <div class="form-group col-md-3">
+                              <label for="inputName4">Serial Number</label>
+                              <input type="text" class="form-control" id="inputDefibSerialNo">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputEmail4">Expiry Date of Batteries</label>
+                                <input type="text" class="form-control" id="iinputDefibExpiry">
+                              </div>
+                              <div class="form-group">
+                                  <label for="inputEmail4">If Limited Access please give  times and availability</label>
+                                  <input type="text" class="form-control" id="inputEmail4">
+                                </div>
+                      </div>
+                          <button type="submit" class="btn btn-danger">Submit</button>
+                  </div>
+
+                </form>
+              </div>
 
       </br>
       </br>
       </br>
       <footer  style ="background-color:grey; color:white; width:100%">
-        <div class="footer-copyright text-center py-3">© 2020 Copyright
-  </div>
+        <div class="footer-copyright text-center py-3 lead">© 2020 Copyright</div>
+
       </footer>
+
     <!--***********<script type="text/javascript" src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script type="text/javascript" src="node_modules/tether/dist/js/tether.min.js"></script>
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+</div>
   </body>
 </html>
