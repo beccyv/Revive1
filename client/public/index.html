@@ -63,6 +63,11 @@ Learn how to configure a non-root public URL by running `npm run build`.
 -->
 <title>Revive App</title>
 <style>
+/* #map div {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+} */
 /* Always set the map height explicitly to define the size of the div
 * element that contains the map. */
 #map {
@@ -152,9 +157,6 @@ function initMap() {
   fetch('address.json')
   .then(function(response){
     response.json().then (function(data){
-      console.log(data);
-      console.log(data.address[0].street);
-      console.log(data.address.length)
       for (i = 0; i < data.address.length; i++) {
         geocode(data.address[i].street)
       }
@@ -171,60 +173,62 @@ function initMap() {
   directionsRenderer.setPanel(document.getElementById('directionsPanel'));
 
   function calcRoute(destination) {
+
+    navigator.geolocation.getCurrentPosition(function(position) {
+      pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      }
+    })
+
     var request = {
-      origin: {lat: 51.524190, lng: -0.102580},
+      origin: pos,
       destination: destination,
       travelMode: 'WALKING',
     };
     directionsService.route(request, function(result) {
       //without the setPanel, just see a line which represents the journey
       directionsRenderer.setDirections(result);
+
     });
   }
 
   //Marianne's code ended here
 
   //creating a waitrose variable with its location
-  var image = 'heart2.svg'
+  var image = 'heart3.svg'
   var image2 = 'locationdotsmall.svg'
 
+  // addMarker({
+  //   coords:{lat: 51.520161, lng: -0.103530},
+  //   content: 'Farringdon Station, Cowcross St, London, EC1M 6BY'
+  // });
+  // addMarker({
+  //   coords:{lat: 51.523610, lng: -0.097640},
+  //   content: '2-4 Old Street, London, EC1V 9AA</p>'
+  // });
 
-
-  addMarker({
-    coords:{lat: 51.520161, lng: -0.103530},
-    content: 'Farringdon Station, Cowcross St, London, EC1M 6BY'
-  });
-  addMarker({
-    coords:{lat: 51.523610, lng: -0.097640},
-    content: '2-4 Old Street, London, EC1V 9AA</p>'
-  });
-
-
-
-
-
-
-  function addMarker(props){
-    var marker = new google.maps.Marker({
-      position: props.coords,
-      map: map,
-      title: 'Waitrose',
-      icon: image,
-
-    });
-    if (props.content){
-      var infoWindow = new google.maps.InfoWindow({
-        content: props.content,
-        maxWidth: 150
-
-      });
-
-      marker.addListener('click', function(){
-        infoWindow.open(map, marker);
-        calcRoute(props.coords);
-      });
-    }
-  }
+  // function addMarker(props){
+  //   var marker = new google.maps.Marker({
+  //     position: props.coords,
+  //     map: map,
+  //     title: 'Waitrose',
+  //     icon: image,
+  //
+  //   });
+  //   if (props.content){
+  //     var infoWindow = new google.maps.InfoWindow({
+  //       content: props.content,
+  //       maxWidth: 150
+  //
+  //     });
+  //
+  //     marker.addListener('click', function(){
+  //       infoWindow.open(map, marker);
+  //       calcRoute(props.coords);
+  //     });
+  //   }
+  // }
   function addGeoMarker(coords){
     var marker = new google.maps.Marker({
       position: coords,
@@ -234,18 +238,16 @@ function initMap() {
     });
   }
 
-
-
   infoWindow = new google.maps.InfoWindow;
 
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
+      pos = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-      addGeoMarker(pos)
+      addGeoMarker(pos);
       infoWindow.setPosition(pos);
       //This is to set the wording on the marker
       infoWindow.setContent('You are here');
@@ -254,12 +256,12 @@ function initMap() {
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
     });
-
   }
   else {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
+
   function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
@@ -267,66 +269,41 @@ function initMap() {
       'Error: Your browser doesn\'t support geolocation.');
       infoWindow.open(map);
     }
-    function geocode(location){
 
-      axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
-        params:{
-          address:location,
-          key:'%REACT_APP_API_KEY%'
-        }
-      })
+  function geocode(location){
 
-      .then(function(response){
-        console.log('Success')
+    axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+      params:{
+        address:location,
+        key:'%REACT_APP_API_KEY%'
+      }
+    })
 
-        var formatted_address = response.data.results[0].formatted_address
-        var latAndLong = {lat:response.data.results[0].geometry.location.lng, lng:response.data.results[0].geometry.location.lat}
-        var image = 'heart2.svg'
-        var marker = new google.maps.Marker({
-          map: map,
-          position: response.data.results[0].geometry.location,
-          icon: image
+    .then(function(response){
+      var formatted_address = response.data.results[0].formatted_address
+      var image = 'heart2.svg'
+      var marker = new google.maps.Marker({
+        map: map,
+        position: response.data.results[0].geometry.location,
+        icon: image
+      });
 
+      if (response.data.results[0].formatted_address){
+        var infoWindow = new google.maps.InfoWindow({
+          content: response.data.results[0].formatted_address,
+          maxWidth: 150
         });
-        if (response.data.results[0].formatted_address){
-          var infoWindow = new google.maps.InfoWindow({
-            content: response.data.results[0].formatted_address,
-            maxWidth: 150
-
-          });
-
           marker.addListener('click', function(){
             infoWindow.open(map, marker);
-            calcRoute(response.data.results[0].formatted_address);
+            calcRoute(response.data.results[0].geometry.location);
           });
         }
-
-
       })
       .catch(function(error){
         console.log()
       });
-
-
     }
-
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   </script>
   <script async defer
