@@ -212,7 +212,9 @@ function initMap() {
       animation: google.maps.Animation.BOUNCE
     });
   }
-  infoWindow = new google.maps.InfoWindow;
+  infoWindow = new google.maps.InfoWindow({
+    pixelOffset: new google.maps.Size(0, -50)
+  });
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -259,7 +261,8 @@ function initMap() {
       if (response.data.results[0].formatted_address){
         var infoWindow = new google.maps.InfoWindow({
           content: response.data.results[0].formatted_address,
-          maxWidth: 150
+          maxWidth: 150,
+          pixelOffset: new google.maps.Size(0, -10)
         });
           marker.addListener('click', function(){
             infoWindow.open(map, marker);
@@ -397,7 +400,7 @@ function initMap() {
               </br>
             </br>
 
-          <h3>Using the Defibrilator</h3>
+          <h3>Using the Defibrillator</h3>
                 <div class="row">
                     <p class="lead">1.Turn on the aed. Bare victims chest.</p>
                   <img src="step-1-AED-instruction.png" class="img-fluid" alt="Responsive image">
@@ -514,11 +517,11 @@ function initMap() {
 
                  <div class="form-row">
                         <div class="form-group col-md-3">
-                          <label for="inputName4">Type of Defibrilator</label>
+                          <label for="inputName4">Type of Defibrillator</label>
                           <input type="text" class="form-control" id="inputDefibType4">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="inputEmail4">Moddel Number</label>
+                            <label for="inputEmail4">Model Number</label>
                             <input type="text" class="form-control" id="inputDefibModelNo">
                           </div>
                           <div class="form-group col-md-3">
