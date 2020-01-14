@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8" />
 
@@ -21,10 +20,6 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!--
-  /* This is the axios link */ -->
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <!--
 
     <!--****fontawesome cdn link*******-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -45,26 +40,31 @@
         padding: 0;
       }
 
-html{
-  scroll-behavior: smooth;
-}
+      html{
+        scroll-behavior: smooth;
+      }
 
-#map {
-  height: 75%;
-}
 
-</style>
-<!--
-Notice the use of %PUBLIC_URL% in the tags above.
-It will be replaced with the URL of the `public` folder during the build.
-Only files inside the `public` folder can be referenced from the HTML.
 
-Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-work correctly both with client-side routing and a non-root public URL.
-Learn how to configure a non-root public URL by running `npm run build`.
--->
-<title>Revive App</title>
+    </style>
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Revive</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 75%;
+      }
+
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -126,170 +126,68 @@ Learn how to configure a non-root public URL by running `npm run build`.
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
 
-//var map is the name of the map. If we have more than one map we will call them diff names to make them work.
-var map, infoWindow;
-//1
-function initMap() {
-  //2
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -51.520161, lng: 51.520161},
-    zoom: 16
-  });
-  //1
+      //var map is the name of the map. If we have more than one map we will call them diff names to make them work.
+      var map, infoWindow;
+      function initMap() {
 
-  //fetching json
-  fetch('address.json')
-  .then(function(response){
-    response.json().then (function(data){
-      for (i = 0; i < data.address.length; i++) {
-        geocode(data.address[i].street)
-      }
-
-    })
-  })
-  //adding directions
-  //Marianne's code here
-  var directionsService = new google.maps.DirectionsService();
-  var directionsRenderer = new google.maps.DirectionsRenderer();
-  directionsRenderer.setMap(map);
-
-  //matches with the directionsPanel div outside of the script tag
-  directionsRenderer.setPanel(document.getElementById('directionsPanel'));
-
-  function calcRoute(destination) {
-
-    navigator.geolocation.getCurrentPosition(function(position) {
-      pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      }
-    })
-
-    var request = {
-      origin: pos,
-      destination: destination,
-      travelMode: 'WALKING',
-    };
-    directionsService.route(request, function(result) {
-      //without the setPanel, just see a line which represents the journey
-      directionsRenderer.setDirections(result);
-
-    });
-  }
-
-  //Marianne's code ended here
-
-  //creating a waitrose variable with its location
-  var image = 'heart3.svg'
-  var image2 = 'locationdotsmall.svg'
-
-  // addMarker({
-  //   coords:{lat: 51.520161, lng: -0.103530},
-  //   content: 'Farringdon Station, Cowcross St, London, EC1M 6BY'
-  // });
-  // addMarker({
-  //   coords:{lat: 51.523610, lng: -0.097640},
-  //   content: '2-4 Old Street, London, EC1V 9AA</p>'
-  // });
-
-  // function addMarker(props){
-  //   var marker = new google.maps.Marker({
-  //     position: props.coords,
-  //     map: map,
-  //     title: 'Waitrose',
-  //     icon: image,
-  //
-  //   });
-  //   if (props.content){
-  //     var infoWindow = new google.maps.InfoWindow({
-  //       content: props.content,
-  //       maxWidth: 150
-  //
-  //     });
-  //
-  //     marker.addListener('click', function(){
-  //       infoWindow.open(map, marker);
-  //       calcRoute(props.coords);
-  //     });
-  //   }
-  // }
-  function addGeoMarker(coords){
-    var marker = new google.maps.Marker({
-      position: coords,
-      map: map,
-      icon: image2,
-      animation: google.maps.Animation.BOUNCE,
-    });
-  }
-
-  infoWindow = new google.maps.InfoWindow;
-
-  // Try HTML5 geolocation.
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-      addGeoMarker(pos);
-      infoWindow.setPosition(pos);
-      //This is to set the wording on the marker
-      infoWindow.setContent('You are here');
-      infoWindow.open(map);
-      map.setCenter(pos);
-    }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
-    });
-  }
-  else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
-
-  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-      'Error: The Geolocation service failed.' :
-      'Error: Your browser doesn\'t support geolocation.');
-      infoWindow.open(map);
-    }
-
-  function geocode(location){
-
-    axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
-      params:{
-        address:location,
-        key:'%REACT_APP_API_KEY%'
-      }
-    })
-
-    .then(function(response){
-      var formatted_address = response.data.results[0].formatted_address
-      var image = 'heart2.svg'
-      var marker = new google.maps.Marker({
-        map: map,
-        position: response.data.results[0].geometry.location,
-        icon: image
-      });
-
-      if (response.data.results[0].formatted_address){
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 16
+        });
+        //creating a waitrose variable with its location
+        var waitrose = {lat: 51.524190, lng: -0.102580};
+        var image = 'imagesmall.png'
+        //adding a waitrose marker
+        var marker = new google.maps.Marker({
+          position: waitrose,
+          map: map,
+          title: 'Waitrose',
+          icon: image
+        });
 
         var infoWindow = new google.maps.InfoWindow({
-          content: response.data.results[0].formatted_address,
-          maxWidth: 150
+          content: '<h2>This is a test info window</h2>'
         });
-          marker.addListener('click', function(){
-            infoWindow.open(map, marker);
-            calcRoute(response.data.results[0].geometry.location);
-          });
-        }
-      })
-      .catch(function(error){
-        console.log()
-      });
-    }
 
-  }
+        marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+
+
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            //This is to set the wording on the marker
+            infoWindow.setContent('You are here');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+
+
+
+      }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=%REACT_APP_API_KEY%&callback=initMap">
@@ -305,13 +203,13 @@ function initMap() {
       <div class="row" style="margin-top:5%;">
         <div class="col-lg-3">
 
-          <center><a href="tel:777" class="phoneMe">
+          <!-- <center><a href="tel:777" class="phoneMe"> -->
             <!--Phone icon-->
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
             width="65" height="65"
             viewBox="0 0 172 172"
-            style=" fill:#000000; ><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path class="phone_anim" d="M0,172v-172h172v172z" fill="none"></path><g fill="#f6240f"><path d="M148.09676,119.25781c-10.23317,-8.76022 -20.64724,-14.08353 -30.75121,-5.32332l-6.04687,5.27163c-4.41887,3.85037 -12.63642,21.78426 -44.39544,-14.78125c-31.75901,-36.48798 -12.86899,-42.17308 -8.42428,-45.97175l6.07272,-5.29748c10.05228,-8.76021 6.2536,-19.79447 -1.00781,-31.16466l-4.36719,-6.8738c-7.28726,-11.31851 -15.2464,-18.76081 -25.32452,-10.02644l-5.45253,4.78065c-4.47055,3.23017 -16.92608,13.79928 -19.94952,33.85216c-3.64363,24.05829 7.85577,51.63101 34.13642,81.86538c26.25481,30.26022 51.99279,45.45493 76.33534,45.19651c20.23377,-0.23257 32.48257,-11.08594 36.30709,-15.03966l5.45253,-4.78065c10.07812,-8.73438 3.82452,-17.64964 -6.4345,-26.40986z"></path></g></g></svg></a></center>
-
+            style=" fill:#000000; ><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path class="phone_anim" d="M0,172v-172h172v172z" fill="none"></path><g fill="#f6240f"><path d="M148.09676,119.25781c-10.23317,-8.76022 -20.64724,-14.08353 -30.75121,-5.32332l-6.04687,5.27163c-4.41887,3.85037 -12.63642,21.78426 -44.39544,-14.78125c-31.75901,-36.48798 -12.86899,-42.17308 -8.42428,-45.97175l6.07272,-5.29748c10.05228,-8.76021 6.2536,-19.79447 -1.00781,-31.16466l-4.36719,-6.8738c-7.28726,-11.31851 -15.2464,-18.76081 -25.32452,-10.02644l-5.45253,4.78065c-4.47055,3.23017 -16.92608,13.79928 -19.94952,33.85216c-3.64363,24.05829 7.85577,51.63101 34.13642,81.86538c26.25481,30.26022 51.99279,45.45493 76.33534,45.19651c20.23377,-0.23257 32.48257,-11.08594 36.30709,-15.03966l5.45253,-4.78065c10.07812,-8.73438 3.82452,-17.64964 -6.4345,-26.40986z"></path></g></g></svg></a></center> -->
+-->
             <p></p>
             <b class="emergency-call" style="font-size:19px;"><center>In an emergency click the phone icon to call 999<center></b>
             </br>
@@ -431,7 +329,7 @@ function initMap() {
                     The second pad should be on the casualty’s left side below the arm pit. Follow AED voice commands until emergency medical personnel arrive.</p>
                 </div>
                 <div class="row">
-                  <center><img src="step-3-AED-instructions.png" class="img-fluid" alt="Responsive image"></center>
+                  <img src="step-3-AED-instructions.png" class="img-fluid" alt="Responsive image">
                 </div>
                 <div class="row lead" style="padding:2%">
                   <p>4.If the casualty shows signs of becoming responsive, such as coughing, opening eyes or speaking, and starts to breathe normally, put them in the recovery position. Leave the defibrillator attached. Monitor their level of response and prepare to give CPR again if necessary.</p>
@@ -440,7 +338,6 @@ function initMap() {
                   <img src="step-4-AED-instruction.jpg" class="img-fluid" alt="Responsive image">
                 </div>
             </br>
-              <source style="font-size:8px;">sourced from: https://www.pulsepoint.org/pulsepoint-aed/ </br> https://www.sja.org.uk/get-advice/first-aid-advice/how-to/how-to-use-a-defibrillator/</source>
             </div>
 
 
@@ -497,10 +394,10 @@ function initMap() {
                 <h2>Add the Location of Defibrilator that is not on our site</h2>
                 <p class="lead">There is no legal responsibility for Business owners or any place with public access to defibrillators to ensure that their device is listed with the ambulance service. There is a chance that the emergency service may not have knowledge of all the locations for defibrillators.
                   For this reason we recommend that you report any unlisted defibrillators that not on our site.</p>
-                <p class="lead">We recommend that when you report the unlisted defibrilator that you complete as much of the form detail as possible.Your contribution could potentially help save a life. </p>
+                <!-- <p class="lead">We recommend that when you report the unlisted defibrilator that you complete as much of the form detail as possible.Your contribution could potentially help save a life. </p> -->
 
                 <!--****** Form ******-->
-                <form style="padding:3%;background-color: #FFE6E5;" action="mailto:anywebsite@hotmail.com" id="aed_form"><!--EBECF0-->
+                <form style="padding:3%;background-color: #FFE6E5;"  id="aed_form"><!--EBECF0-->
                     <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputName4">Name</label>
@@ -559,16 +456,17 @@ function initMap() {
                 </form>
               </div>
 
+      </br>
+      </br>
+      </br>
+      <footer  style ="background-color:grey; color:white; width:100%">
+        <div class="footer-copyright text-center py-3 lead">© 2020 Copyright</div>
 
-</br>
-</br>
-</br>
-<footer  style ="background-color:grey; color:white; width:100%">
-  <div class="footer-copyright text-center py-3">© 2020 Copyright
-  </div>
-</footer>
-<!--***********<script type="text/javascript" src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-<script type="text/javascript" src="node_modules/tether/dist/js/tether.min.js"></script>
-<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
-</body>
+      </footer>
+
+    <!--***********<script type="text/javascript" src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="node_modules/tether/dist/js/tether.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+</div>
+  </body>
 </html>
