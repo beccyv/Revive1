@@ -1,0 +1,372 @@
+{
+  "address": [
+    {
+      "street": "76 Rivington Street",
+      "city": "London",
+      "postcode": "EC2A 3AY",
+      "country": "UK",
+      "opening-hour": "Monday to Friday 8.30am-6pm",
+    "coords":{
+      "latitude": 51.526279,
+      "longitude": -0.078040
+    }
+  },
+    {
+    "street": "17 Great Eastern Street",
+    "postcode": "EC2A 3NT",
+    "city": "London",
+    "country": "United Kingdom",
+    "opening-hour": "Access: PAD-Anytime 24x7",
+  "coords":{
+    "latitude": 51.522839,
+    "longitude": -0.077740
+
+    }
+  },
+  {
+  "street": "5 Appold Street",
+  "city": "London",
+  "postcode": "EC2A 2DA",
+  "country": "UK",
+  "opening-hour": "Access: PAD-Anytime 24x7",
+ "coords": {
+  "latitude": 51.521360,
+  "longitude": -0.080970
+ }
+},
+  {
+    "street": "Hackney Britannia Project - Morgan Sindall",
+    "city": "London",
+    "postcode": "N1 5LA",
+    "country": "UK",
+    "opening-hour": "Access: PAD-Anytime 24x7",
+    "coords": {
+      "latitude": 51.531020,
+      "longitude": -0.082900
+     }
+  },
+  {
+    "street": "46 Eagle Wharf Road",
+    "city": "London",
+    "postcode": "N1 7ED",
+    "country": "UK",
+    "opening-hour": "Limited Access Monday to Friday 8am-6pm",
+  "coords": {
+      "latitude": 51.534940,
+      "longitude": -0.090750
+     }
+  },
+  {
+    "street": "1 Finsbury Avenue SRM",
+    "city": "London",
+    "postcode": "EC2M 2PA",
+    "country": "UK",
+    "opening-hour": "Access: PAD-Anytime 24x7",
+  "coords": {
+      "latitude": 51.519410,
+      "longitude": -0.085190
+     }
+  },
+  {
+    "street": "135 Bishopsgate",
+    "city": "London",
+    "postcode": "EC2M 3YD",
+    "country": "UK",
+    "opening-hour": "Access: PAD-Anytime 24x7",
+    "coords": {
+      "latitude": 51.517050,
+      "longitude": -0.080870
+     }
+  },
+  {
+    "street": "100 Liverpool Street, Broadgate Circle",
+    "city": "London",
+    "postcode": "EC2M 2RH",
+    "country": "UK",
+    "opening-hour": "Access: PAD-Anytime 24x7",
+    "coords": {
+      "latitude": 51.519100,
+      "longitude": -0.083480
+     }
+  },
+  {
+    "street": "Eden Hous 23-25 Wilson Street",
+    "city": "London",
+    "postcode": "EC2M 2TE",
+    "country": "UK",
+    "opening-hour": "Access: PAD-Anytime 24x7",
+    "coords": {
+      "latitude": 51.519550,
+      "longitude": -0.085950
+     }
+  },
+  {
+    "street": "Park House 16-18 Finsbury Circus",
+    "city": "London",
+    "postcode": "EC2M 7EB",
+    "country": "UK",
+    "opening-hour": "Limited Access 8am - 6pm Monday to Friday",
+    "coords": {
+      "latitude": 51.518140,
+      "longitude": -0.085440
+     }
+  },
+  {
+    "street": "16th Floor Dashwood House Old Broad Street",
+    "city": "London",
+    "postcode": "EC2M 1QS",
+    "country": "UK",
+    "opening-hour": "Limited Access 9am - 5pm Monday to Friday",
+    "coords": {
+      "latitude": 51.515710,
+      "longitude": -0.084120
+     }
+  },
+  {
+    "street": "Imagile Group, 3rd Floor, 10 New Street",
+    "city": "London",
+    "postcode": "EC2M 4TP",
+    "country": "UK",
+    "opening-hour": "Limited Access 09:00-17:00",
+    "coords": {
+      "latitude": 51.517170,
+      "longitude": -0.079200
+     }
+  },
+  {
+    "street": "Richer Sounds, Shop Floor, 44 Artillery Lane",
+    "city": "London",
+    "postcode": "E1 7LS",
+    "country": "UK",
+    "opening-hour": "Limited Access 12pm - 6pm 7 days a week",
+    "coords": {
+      "latitude": 51.518480,
+      "longitude": -0.077510
+     }
+  },
+  {
+    "street": "Coventry University London, Ground floor, University House, Middlesex Street",
+    "city": "London",
+    "postcode": "E1 7JF",
+    "country": "UK",
+    "opening-hour": "imited Access 7am - 10pm (Mon-Fri) / 1pm-7pm Sat access / No Sun access",
+    "coords": {
+      "latitude": 51.517540,
+      "longitude": -0.077540
+     } 
+  },
+  {
+    "street": "Adstream UK Ltd, 20-22 Commercial Stret",
+    "city": "London",
+    "postcode": "E1 6LP",
+    "country": "UK",
+    "opening-hour": "Limited Access Monday to Friday 8.30am-6pm: Ground Floor Kitchen",
+    "coords": {
+      "latitude": 51.518890,
+      "longitude": -0.074480
+     } 
+  },
+  {
+    "street": "Higgins Homes, Hemming Street",
+    "city": "London",
+    "postcode": "E1 5BW",
+    "country": "UK",
+    "opening-hour": "Limited Access Monday to Friday 7.30am-5pm",
+    "coords": {
+      "latitude": 51.520721,
+      "longitude": -0.063950
+     } 
+  },
+  {
+    "street": "Mile End Hospital, Accelerate Clinic, Bancroft Road",
+    "city": "London",
+    "postcode": "E1 4DG",
+    "country": "UK",
+    "opening-hour": "Limited Access Monday to Friday 9am-5pm",
+    "coords": {
+      "latitude": 51.525390,
+      "longitude": -0.044470
+     } 
+  },
+  {
+    "street": "St George City, Project Office, 9 Pennington Street",
+    "city": "London",
+    "postcode": "E1W 2BD",
+    "country": "UK",
+    "opening-hour": "Limited Access Monday to Saturday,closed Sundays",
+    "coords": {
+      "latitude": 51.508770,
+      "longitude": -0.061740
+     } 
+  },
+  {
+    "street": "CFIELD CONSTRUCTION, ROSSENDALE STREET, CAZENOVE",
+    "city": "London",
+    "postcode": "E5 8TA",
+    "country": "UK",
+    "opening-hour": "Limited Access Mon to Fri 8AM -6PM",
+    "coords": {
+      "latitude": 51.563140,
+      "longitude": -0.060000
+     }
+  },
+  {
+    "street": "Royal Mint Gardens, Midgard Ltd, Construction Site Royal Mint Street",
+    "city": "London",
+    "postcode": "E1 8LG",
+    "country": "UK",
+    "opening-hour": "Access: PAD-Anytime 24x7",
+    "coords": {
+      "latitude": 51.510370,
+      "longitude": -0.071150
+     }
+  },
+  {
+    "street": "124-128 City Road",
+    "city":"London",
+    "postcode": "EC1V 2NJ",
+    "country": "UK",
+    "opening-hour": "Limited Access, Monday to Friday 8.30am-5pm"
+  },
+  {
+    "street": "St Lukes Community Centre, Central Street",
+    "city":"London",
+    "postcode": "EC1V 8AJ",
+    "country": "UK",
+    "opening-hour": "Limited Access, Mon - Sun 8am - 9pm (excluding bank holidays)"
+  },
+{
+  "street": "167 - 173 Goswell Road Islington",
+  "city":"London",
+  "postcode": "EC1V 7HD",
+  "country": "UK",
+  "opening-hour": "7 - 6:30 Mon-Friday"
+},
+{
+  "street": "Turnpike House Higgins Site Office, Goswell Road",
+  "city":"London",
+  "postcode": "EC1V 7PB",
+  "country": "UK",
+  "opening-hour": "Monday to Friday 7.30am-5.30pm"
+},
+{
+  "street": "3 Corners Centre, Northampton Road",
+  "city":"London",
+  "postcode": "EC1R 0HU",
+  "country": "UK",
+  "opening-hour": "9am to 8pm -mon-Fri / 9-30am to 3pm Sat & Sun"
+},
+{
+  "street": "City Tower, Basinghall Street",
+  "city":"London",
+  "postcode": "EC2V 5DE",
+  "country": "UK",
+  "opening-hour": "PAD-Anytime 24x7"
+},
+{
+  "street": "1 Gresham Street",
+  "city":"London",
+  "postcode": "EC2V 7BX",
+  "country": "UK",
+  "opening-hour": "08.30-16.30"
+},
+{
+  "street": "25 Farringdon Street",
+  "city":"London",
+  "postcode": "EC4A 4AB",
+  "country": "UK",
+  "opening-hour": "8am-6.30pm"
+},
+{
+  "street": "100 Fetter Lane",
+  "city":"London",
+  "postcode": "EC4A 1BN",
+  "country": "UK",
+  "opening-hour": "9.00 am to 5.00 pm Monday to Friday"
+},
+{
+  "street": "Mount Anvil - Royal Docks West, Seasgull Lane",
+  "city":"London",
+  "postcode": "E16 1AZ",
+  "country": "UK",
+  "opening-hour": "Monday to Friday"
+},
+{
+  "street": "60 Bishopsgate, Hasilwood House",
+  "city":"London",
+  "postcode": "EC2N 4AW",
+  "country": "UK",
+  "opening-hour": "Monday to Friday 9am-5pm"
+},
+{
+  "street": "Perrys City, Threadneedle Street",
+  "city":"London",
+  "postcode": "EC2R 8AY",
+  "country": "UK",
+  "opening-hour": "Monday to Friday 9am-5pm"
+},
+{
+  "street": "67 Lombard Street, Level -5",
+  "city":"London",
+  "postcode": "EC3V 9LJ",
+  "country": "UK",
+  "opening-hour": "Monday to Friday 9am-5pm"
+},
+{
+  "street": "40 Lime Street, Everest Reinsurance Group",
+  "city":"London",
+  "postcode": "EC3M 5BS",
+  "country": "UK",
+  "opening-hour": "Monday to Friday 9am-5pm"
+},
+{
+  "street": "10 Fenchurch Avenue",
+  "city":"London",
+  "postcode": "EC3M 5BN",
+  "country": "UK",
+  "opening-hour": "Monday to Friday 9am-5pm"
+},
+{
+  "street": "71 Fenchurch Street",
+  "city":"London",
+  "postcode": "EC3M 1BS",
+  "country": "UK",
+  "opening-hour": "7am-7pm"
+},
+{
+  "street": "1 Minster Court, Mincing Lane",
+  "city":"London",
+  "postcode": "EC3R 7AA",
+  "country": "UK",
+  "opening-hour": "9.00 am to 5.00 pm Monday to Friday"
+},
+{
+  "street": "35 Seething Lane",
+  "city":"London",
+  "postcode": "EC3N 4AH",
+  "country": "UK",
+  "opening-hour": "Monday to Friday 7am-6.30pm"
+},
+{
+  "street": "10 Trinity Square, Ardmore Construction Limited, Muscovy Street",
+  "city":"London",
+  "postcode": "EC3N",
+  "country": "UK",
+  "opening-hour": "PAD-Anytime 24x7"
+},
+{
+  "street": "Admiral House, 76-78 Old street",
+  "city":"London",
+  "postcode": "EC1V 9AZ",
+  "country": "UK",
+  "opening-hour": "Monday to Friday 8.30am-9pm"
+},
+{
+  "street": "99 Golden Lane ",
+  "city":"London",
+  "postcode": "EC1Y 0TZ",
+  "country": "UK",
+  "opening-hour": "Monday to Friday 0800 - 1800"
+}
+]
+}
