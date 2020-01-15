@@ -5,7 +5,7 @@
       "city": "London",
       "postcode": "EC2A 3AY",
       "country": "UK",
-      "opening-hour": "Monday to Friday 8.30am-6pm",
+      "opening": "Monday to Friday 8.30am-6pm",
     "coords":{
       "latitude": 51.526279,
       "longitude": -0.078040
@@ -16,7 +16,7 @@
     "postcode": "EC2A 3NT",
     "city": "London",
     "country": "United Kingdom",
-    "opening-hour": "Access: PAD-Anytime 24x7",
+    "opening": "Access: PAD-Anytime 24x7",
   "coords":{
     "latitude": 51.522839,
     "longitude": -0.077740
@@ -30,7 +30,7 @@
   "city": "London",
   "postcode": "EC2A 2DA",
   "country": "UK",
-  "opening-hour": "Access: PAD-Anytime 24x7",
+  "opening": "Access: PAD-Anytime 24x7",
  "coords": {
   "latitude": 51.521360,
   "longitude": -0.080970
@@ -41,7 +41,7 @@
     "city": "London",
     "postcode": "N1 5LA",
     "country": "UK",
-    "opening-hour": "Access: PAD-Anytime 24x7",
+    "opening": "Access: PAD-Anytime 24x7",
     "coords": {
       "latitude": 51.531020,
       "longitude": -0.082900
@@ -52,7 +52,7 @@
     "city": "London",
     "postcode": "N1 7ED",
     "country": "UK",
-    "opening-hour": "Limited Access Monday to Friday 8am-6pm",
+    "opening": "Limited Access Monday to Friday 8am-6pm",
   "coords": {
       "latitude": 51.534940,
       "longitude": -0.090750
@@ -63,7 +63,7 @@
     "city": "London",
     "postcode": "EC2M 2PA",
     "country": "UK",
-    "opening-hour": "Access: PAD-Anytime 24x7",
+    "opening": "Access: PAD-Anytime 24x7",
   "coords": {
       "latitude": 51.519410,
       "longitude": -0.085190
@@ -74,7 +74,7 @@
     "city": "London",
     "postcode": "EC2M 3YD",
     "country": "UK",
-    "opening-hour": "Access: PAD-Anytime 24x7",
+    "opening": "Access: PAD-Anytime 24x7",
     "coords": {
       "latitude": 51.517050,
       "longitude": -0.080870
@@ -85,7 +85,7 @@
     "city": "London",
     "postcode": "EC2M 2RH",
     "country": "UK",
-    "opening-hour": "Access: PAD-Anytime 24x7",
+    "opening": "Access: PAD-Anytime 24x7",
     "coords": {
       "latitude": 51.519100,
       "longitude": -0.083480
@@ -96,7 +96,7 @@
     "city": "London",
     "postcode": "EC2M 2TE",
     "country": "UK",
-    "opening-hour": "Access: PAD-Anytime 24x7",
+    "opening": "Access: PAD-Anytime 24x7",
     "coords": {
       "latitude": 51.519550,
       "longitude": -0.085950
@@ -107,7 +107,7 @@
     "city": "London",
     "postcode": "EC2M 7EB",
     "country": "UK",
-    "opening-hour": "Limited Access 8am - 6pm Monday to Friday",
+    "opening": "Limited Access 8am - 6pm Monday to Friday",
     "coords": {
       "latitude": 51.518140,
       "longitude": -0.085440
@@ -118,7 +118,7 @@
     "city": "London",
     "postcode": "EC2M 1QS",
     "country": "UK",
-    "opening-hour": "Limited Access 9am - 5pm Monday to Friday",
+    "opening": "Limited Access 9am - 5pm Monday to Friday",
     "coords": {
       "latitude": 51.515710,
       "longitude": -0.084120
@@ -129,7 +129,7 @@
     "city": "London",
     "postcode": "EC2M 4TP",
     "country": "UK",
-    "opening-hour": "Limited Access 09:00-17:00",
+    "opening": "Limited Access 09:00-17:00",
     "coords": {
       "latitude": 51.517170,
       "longitude": -0.079200
@@ -140,7 +140,7 @@
     "city": "London",
     "postcode": "E1 7LS",
     "country": "UK",
-    "opening-hour": "Limited Access 12pm - 6pm 7 days a week",
+    "opening": "Limited Access 12pm - 6pm 7 days a week",
     "coords": {
       "latitude": 51.518480,
       "longitude": -0.077510
@@ -151,7 +151,7 @@
     "city": "London",
     "postcode": "E1 7JF",
     "country": "UK",
-    "opening-hour": "imited Access 7am - 10pm (Mon-Fri) / 1pm-7pm Sat access / No Sun access",
+    "opening": "imited Access 7am - 10pm (Mon-Fri) / 1pm-7pm Sat access / No Sun access",
     "coords": {
       "latitude": 51.517540,
       "longitude": -0.077540
@@ -163,7 +163,7 @@
     "city": "London",
     "postcode": "E1 6LP",
     "country": "UK",
-    "opening-hour": "Limited Access Monday to Friday 8.30am-6pm: Ground Floor Kitchen",
+    "opening": "Limited Access Monday to Friday 8.30am-6pm: Ground Floor Kitchen",
     "coords": {
       "latitude": 51.518890,
       "longitude": -0.074480
@@ -174,7 +174,7 @@
     "city": "London",
     "postcode": "E1 5BW",
     "country": "UK",
-    "opening-hour": "Limited Access Monday to Friday 7.30am-5pm",
+    "opening": "Limited Access Monday to Friday 7.30am-5pm",
     "coords": {
       "latitude": 51.520721,
       "longitude": -0.063950
@@ -185,7 +185,7 @@
     "city": "London",
     "postcode": "E1 4DG",
     "country": "UK",
-    "opening-hour": "Limited Access Monday to Friday 9am-5pm",
+    "opening": "Limited Access Monday to Friday 9am-5pm",
     "coords": {
       "latitude": 51.525390,
       "longitude": -0.044470
@@ -197,7 +197,7 @@
     "city": "London",
     "postcode": "E1W 2BD",
     "country": "UK",
-    "opening-hour": "Limited Access Monday to Saturday,closed Sundays",
+    "opening": "Limited Access Monday to Saturday,closed Sundays",
     "coords": {
       "latitude": 51.508770,
       "longitude": -0.061740
@@ -208,7 +208,7 @@
     "city": "London",
     "postcode": "E5 8TA",
     "country": "UK",
-    "opening-hour": "Limited Access Mon to Fri 8AM -6PM",
+    "opening": "Limited Access Mon to Fri 8AM -6PM",
     "coords": {
       "latitude": 51.563140,
       "longitude": -0.060000
@@ -219,7 +219,7 @@
     "city": "London",
     "postcode": "E1 8LG",
     "country": "UK",
-    "opening-hour": "Access: PAD-Anytime 24x7",
+    "opening": "Access: PAD-Anytime 24x7",
     "coords": {
       "latitude": 51.510370,
       "longitude": -0.071150
@@ -230,442 +230,430 @@
     "city":"London",
     "postcode": "EC1V 2NJ",
     "country": "UK",
-    "opening-hour": "Limited Access, Monday to Friday 8.30am-5pm"
+    "opening": "Limited Access, Monday to Friday 8.30am-5pm"
   },
   {
     "street": "St Lukes Community Centre, Central Street",
     "city":"London",
     "postcode": "EC1V 8AJ",
     "country": "UK",
-    "opening-hour": "Limited Access, Mon - Sun 8am - 9pm (excluding bank holidays)"
+    "opening": "Limited Access, Mon - Sun 8am - 9pm (excluding bank holidays)"
   },
 {
   "street": "167 - 173 Goswell Road Islington London",
   "city":"London",
   "postcode": "EC1V 7HD",
   "country": "UK",
-  "opening-hour": "7 - 6:30 Mon-Friday"
+  "opening": "7 - 6:30 Mon-Friday"
 },
 {
   "street": "Flat 158 Turnpike House Goswell Road",
   "city":"London",
   "postcode": "EC1V 7PB",
   "country": "UK",
-  "opening-hour": "Monday to Friday 7.30am-5.30pm"
+  "opening": "Monday to Friday 7.30am-5.30pm"
 },
 {
   "street": "3 Corners Centre, 40 Northampton Road",
   "city":"London",
   "postcode": "EC1R 0HU",
   "country": "UK",
-  "opening-hour": "9am to 8pm -mon-Fri / 9-30am to 3pm Sat & Sun"
+  "opening": "9am to 8pm -mon-Fri / 9-30am to 3pm Sat & Sun"
 },
-{
-  "street": "City Tower, Basinghall Street",
-  "city":"London",
-  "postcode": "EC2V 5DE",
-  "country": "UK",
-  "opening-hour": "PAD-Anytime 24x7"
-},
+
 {
   "street": "1 Gresham Street",
   "city":"London",
   "postcode": "EC2V 7BX",
   "country": "UK",
-  "opening-hour": "08.30-16.30"
+  "opening": "08.30-16.30"
 },
 {
   "street": "25 Farringdon Street",
   "city":"London",
   "postcode": "EC4A 4AB",
   "country": "UK",
-  "opening-hour": "8am-6.30pm"
+  "opening": "8am-6.30pm"
 },
 {
   "street": "100 Fetter Lane",
   "city":"London",
   "postcode": "EC4A 1BN",
   "country": "UK",
-  "opening-hour": "9.00 am to 5.00 pm Monday to Friday"
+  "opening": "9.00 am to 5.00 pm Monday to Friday"
 },
 {
   "street": "Mount Anvil - Royal Docks West, Seasgull Lane",
   "city":"London",
   "postcode": "E16 1AZ",
   "country": "UK",
-  "opening-hour": "Monday to Friday"
+  "opening": "Monday to Friday"
 },
 {
   "street": "60 Bishopsgate, Hasilwood House",
   "city":"London",
   "postcode": "EC2N 4AW",
   "country": "UK",
-  "opening-hour": "Monday to Friday 9am-5pm"
+  "opening": "Monday to Friday 9am-5pm"
 },
 {
   "street": "Perrys City, Threadneedle Street",
   "city":"London",
   "postcode": "EC2R 8AY",
   "country": "UK",
-  "opening-hour": "Monday to Friday 9am-5pm"
+  "opening": "Monday to Friday 9am-5pm"
 },
 {
   "street": "67 Lombard Street, Level -5",
   "city":"London",
   "postcode": "EC3V 9LJ",
   "country": "UK",
-  "opening-hour": "Monday to Friday 9am-5pm"
+  "opening": "Monday to Friday 9am-5pm"
 },
 {
   "street": "40 Lime Street, Everest Reinsurance Group",
   "city":"London",
   "postcode": "EC3M 5BS",
   "country": "UK",
-  "opening-hour": "Monday to Friday 9am-5pm"
+  "opening": "Monday to Friday 9am-5pm"
 },
 {
   "street": "10 Fenchurch Avenue",
   "city":"London",
   "postcode": "EC3M 5BN",
   "country": "UK",
-  "opening-hour": "Monday to Friday 9am-5pm"
+  "opening": "Monday to Friday 9am-5pm"
 },
 {
   "street": "71 Fenchurch Street",
   "city":"London",
   "postcode": "EC3M 1BS",
   "country": "UK",
-  "opening-hour": "7am-7pm"
+  "opening": "7am-7pm"
 },
 {
   "street": "1 Minster Court, Mincing Lane",
   "city":"London",
   "postcode": "EC3R 7AA",
   "country": "UK",
-  "opening-hour": "9.00 am to 5.00 pm Monday to Friday"
+  "opening": "9.00 am to 5.00 pm Monday to Friday"
 },
 {
   "street": "35 Seething Lane",
   "city":"London",
   "postcode": "EC3N 4AH",
   "country": "UK",
-  "opening-hour": "Monday to Friday 7am-6.30pm"
+  "opening": "Monday to Friday 7am-6.30pm"
 },
 {
   "street": "10 Trinity Square, Ardmore Construction Limited, Muscovy Street",
   "city":"London",
   "postcode": "EC3N",
   "country": "UK",
-  "opening-hour": "PAD-Anytime 24x7"
+  "opening": "PAD-Anytime 24x7"
 },
 {
   "street": "Admiral House, 76-78 Old street",
   "city":"London",
   "postcode": "EC1V 9AZ",
   "country": "UK",
-  "opening-hour": "Monday to Friday 8.30am-9pm"
+  "opening": "Monday to Friday 8.30am-9pm"
 },
 
 {
   "street": "53-64 chanceryLane",
   "city":"London",
   "postcode": "WC2A 1QS",
-  "opening-hour": "Monday to Thursday 9am-5.30pm Friday 9am-4.30pm"
+  "opening": "Monday to Thursday 9am-5.30pm Friday 9am-4.30pm"
 },
 {
   "street": "29 Bloomsbury Way",
   "city":"London",
   "postcode": "WC1A 2SL",
-  "opening-hour": "12pm - 6pm 7 days a week"
+  "opening": "12pm - 6pm 7 days a week"
 },
 {
   "street": "168-173 High Holborn",
   "city":"London",
   "postcode": "WC1V 7AA",
-  "opening-hour": "Monday to Friday 8.30am-6pm"
+  "opening": "Monday to Friday 8.30am-6pm"
 },
 {
   "street": "14 Greek Street",
   "city":"London",
   "postcode": "W1D 4AT",
-  "opening-hour": "7 am - 7 pm Monday-Friday, 7 am - 2 pm Saturday"
+  "opening": "7 am - 7 pm Monday-Friday, 7 am - 2 pm Saturday"
 },
 {
   "street": "2 Leicester Court",
   "city":"London",
   "postcode": "WC2H 7DW",
-  "opening-hour": "Monday to Thursday 10am-5.30pm; Saturday and Sunday 10am-5.30pm (Not open on Fridays)"
+  "opening": "Monday to Thursday 10am-5.30pm; Saturday and Sunday 10am-5.30pm (Not open on Fridays)"
 },
 {
   "street": "54 Whitcomb Street",
   "city":"London",
   "postcode": "WC2H 7DN",
-  "opening-hour": "Monday to Friday 8am-6pm"
+  "opening": "Monday to Friday 8am-6pm"
 },
 {
   "street": "20 Hanover Square",
   "city":"London",
   "postcode": "W1S 1JY",
-  "opening-hour": "Monday to Friday 8am-6pm; Saturday 8am-1pm"
+  "opening": "Monday to Friday 8am-6pm; Saturday 8am-1pm"
 },
 {
   "street": "124-128 City Road",
   "city":"London",
   "postcode": "EC1V 2NJ",
   "country": "UK",
-  "opening-hour": "Limited Access, Monday to Friday 8.30am-5pm"
+  "opening": "Limited Access, Monday to Friday 8.30am-5pm"
 },
 {
   "street": "St Lukes Community Centre, Central Street",
   "city":"London",
   "postcode": "EC1V 8AJ",
   "country": "UK",
-  "opening-hour": "Limited Access, Mon - Sun 8am - 9pm (excluding bank holidays)"
+  "opening": "Limited Access, Mon - Sun 8am - 9pm (excluding bank holidays)"
 },
 {
 "street": "City Tower, Basinghall Street",
 "city":"London",
 "postcode": "EC2V 5DE",
 "country": "UK",
-"opening-hour": "PAD-Anytime 24x7"
+"opening": "PAD-Anytime 24x7"
 },
 {
 "street": "1 Gresham Street",
 "city":"London",
 "postcode": "EC2V 7BX",
 "country": "UK",
-"opening-hour": "08.30-16.30"
+"opening": "08.30-16.30"
 },
 {
 "street": "25 Farringdon Street",
 "city":"London",
 "postcode": "EC4A 4AB",
 "country": "UK",
-"opening-hour": "8am-6.30pm"
+"opening": "8am-6.30pm"
 },
 {
 "street": "100 Fetter Lane",
 "city":"London",
 "postcode": "EC4A 1BN",
 "country": "UK",
-"opening-hour": "9.00 am to 5.00 pm Monday to Friday"
+"opening": "9.00 am to 5.00 pm Monday to Friday"
 },
 {
 "street": "Mount Anvil - Royal Docks West, Seasgull Lane",
 "city":"London",
 "postcode": "E16 1AZ",
 "country": "UK",
-"opening-hour": "Monday to Friday"
+"opening": "Monday to Friday"
 },
 {
 "street": "60 Bishopsgate, Hasilwood House",
 "city":"London",
 "postcode": "EC2N 4AW",
 "country": "UK",
-"opening-hour": "Monday to Friday 9am-5pm"
+"opening": "Monday to Friday 9am-5pm"
 },
 {
 "street": "Perrys City, Threadneedle Street",
 "city":"London",
 "postcode": "EC2R 8AY",
 "country": "UK",
-"opening-hour": "Monday to Friday 9am-5pm"
+"opening": "Monday to Friday 9am-5pm"
 },
 {
 "street": "67 Lombard Street, Level -5",
 "city":"London",
 "postcode": "EC3V 9LJ",
 "country": "UK",
-"opening-hour": "Monday to Friday 9am-5pm"
+"opening": "Monday to Friday 9am-5pm"
 },
 {
 "street": "40 Lime Street, Everest Reinsurance Group",
 "city":"London",
 "postcode": "EC3M 5BS",
 "country": "UK",
-"opening-hour": "Monday to Friday 9am-5pm"
+"opening": "Monday to Friday 9am-5pm"
 },
 {
 "street": "10 Fenchurch Avenue",
 "city":"London",
 "postcode": "EC3M 5BN",
 "country": "UK",
-"opening-hour": "Monday to Friday 9am-5pm"
+"opening": "Monday to Friday 9am-5pm"
 },
 {
 "street": "71 Fenchurch Street",
 "city":"London",
 "postcode": "EC3M 1BS",
 "country": "UK",
-"opening-hour": "7am-7pm"
+"opening": "7am-7pm"
 },
 {
 "street": "1 Minster Court, Mincing Lane",
 "city":"London",
 "postcode": "EC3R 7AA",
 "country": "UK",
-"opening-hour": "9.00 am to 5.00 pm Monday to Friday"
+"opening": "9.00 am to 5.00 pm Monday to Friday"
 },
 {
 "street": "35 Seething Lane",
 "city":"London",
 "postcode": "EC3N 4AH",
 "country": "UK",
-"opening-hour": "Monday to Friday 7am-6.30pm"
+"opening": "Monday to Friday 7am-6.30pm"
 },
 {
 "street": "10 Trinity Square, Ardmore Construction Limited, Muscovy Street",
 "city":"London",
 "postcode": "EC3N",
 "country": "UK",
-"opening-hour": "PAD-Anytime 24x7"
+"opening": "PAD-Anytime 24x7"
 },
-{
-"street": "Admiral House, 76-78 Old street",
-"city":"London",
-"postcode": "EC1V 9AZ",
-"country": "UK",
-"opening-hour": "Monday to Friday 8.30am-9pm"
-},
+
 {
 "street": "99 Golden Lane ",
 "city":"London",
 "postcode": "EC1Y 0TZ",
 "country": "UK",
-"opening-hour": "Monday to Friday 0800 - 1800"
+"opening": "Monday to Friday 0800 - 1800"
 },
 {
     "street": "200 Grays Inn Road",
     "city":"London",
     "postcode": "WC1X 8XZ",
-    "opening-hour": "Mon - Friday : 07:00 - 19:00"
+    "opening": "Mon - Friday : 07:00 - 19:00"
   },
   {
     "street": "Harcourt House, Cavendish Square",
     "city":"London",
     "postcode": "W1G 0PN",
-    "opening-hour": "Monday to Friday"
+    "opening": "Monday to Friday"
   },
   {
     "street": "75 & 77 Brook Street",
     "city":"London",
     "postcode": "W1K 4AD",
-    "opening-hour": "Monday to Friday"
+    "opening": "Monday to Friday"
   },
   {
     "street": "40 - 50 Tottenham Street",
     "city":"London",
     "postcode": "W1T 4RN",
-    "opening-hour": "Mon-Fri 8am - 6pm"
+    "opening": "Mon-Fri 8am - 6pm"
   },
   {
     "street": "33 Riding House Street",
     "city":"London",
     "postcode": "W1W 7DZ",
-    "opening-hour": "Monday to Friday 9am-6.30pm"
+    "opening": "Monday to Friday 9am-6.30pm"
   },
   {
     "street": "Engine Group, Great Portland Street",
     "city":"London",
     "postcode": "W1W 7RT",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "Walmar House, Reception, 296 Regent Street",
     "city":"London",
     "postcode": "W1B 3AP",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "BAE Systems, 6 Carlton Gardens",
     "city":"London",
     "postcode": "SW1Y 5AD",
-    "opening-hour": "Mon-Fri 0830-1700"
+    "opening": "Mon-Fri 0830-1700"
   },
   {
     "street": "12 Carlton House Terrace, Mezzanine Office",
     "city":"London",
     "postcode": "SW1Y 5AH",
-    "opening-hour": "Monday to Sunday 9am-11pm"
+    "opening": "Monday to Sunday 9am-11pm"
   },
   {
     "street": "15 Stanhope Gate",
     "city":"London",
     "postcode": "W1K 1LN",
-    "opening-hour": "Monday to Friday 8am-8pm"
+    "opening": "Monday to Friday 8am-8pm"
   },
   {
     "street": "100 North Wharf Road, Paddington",
     "city":"London",
     "postcode": "W2 1LA",
-    "opening-hour": "Mon-Fri 8-6 Sat 8-12"
+    "opening": "Mon-Fri 8-6 Sat 8-12"
   },
   {
     "street": "7 Fosbury Mews",
     "city":"London",
     "postcode": "W2 3JE",
-    "opening-hour": "Mon-Fri 8am - 6pm"
+    "opening": "Mon-Fri 8am - 6pm"
   },
   {
     "street": "54 Wood Lane, White City Development",
     "city":"London",
     "postcode": "W12 7RQ",
-    "opening-hour": "Monday to Friday 7am-6pm"
+    "opening": "Monday to Friday 7am-6pm"
 
   },
   {
     "street": "26 Hill Road, St. Johns Wood",
     "city":"London",
     "postcode": "NW8 9QG",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "Westminster Synagogue, Rutland Gardens",
     "city":"London",
     "postcode": "SW7 1BX",
-    "opening-hour": "Monday to Friday 7am-10pm; Saturday 8am-2pm"
+    "opening": "Monday to Friday 7am-10pm; Saturday 8am-2pm"
   },
   {
     "street": "36 Ennismore Gardens",
     "city":"London",
     "postcode": "SW7 1AF",
-    "opening-hour": "8am to 5.30pm"
+    "opening": "8am to 5.30pm"
   },
   {
     "street": "Baden-Powell House, 65-67 Queens Gate",
     "city":"London",
     "postcode": "SW7 5JS",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "258 Fulham Road",
     "city":"London",
     "postcode": "SW10 9EL",
-    "opening-hour": "11am-4pm"
+    "opening": "11am-4pm"
   },
   {
     "street": "43 Howland Street",
     "city":"London",
     "postcode": "W1T 4AY",
-    "opening-hour": "Mon-Fri 8am - 6pm"
+    "opening": "Mon-Fri 8am - 6pm"
   },
   {
     "street": "388 High Road, Wembley",
     "city":"London",
     "postcode": "HA9 6AR",
-    "opening-hour": "Mon - Fri 09:00 - 18:00 hrs"
+    "opening": "Mon - Fri 09:00 - 18:00 hrs"
   },
   {
     "street": "21, Wembley Park Drive, Wembley",
     "city":"London",
     "postcode": "NW2 5SS",
-    "opening-hour": "Mon - Fri 09:00 - 18:00 hrs"
+    "opening": "Mon - Fri 09:00 - 18:00 hrs"
   },
   {
     "street": "Edgware Road, Cricklewood",
     "city":"London",
     "postcode": "NW2 6GJ",
-    "opening-hour": "Monday to Friday 7.30am-5.30pm; Saturday 8am-12.30pm"
+    "opening": "Monday to Friday 7.30am-5.30pm; Saturday 8am-12.30pm"
   },
   {
     "street": "ENGIE Site Office, Oxford Road, Kilburn",
@@ -676,325 +664,325 @@
     "street": "Television Centre, In Site Security Office, Wood Lane, Shepherds Bush",
     "city":"London",
     "postcode": "W12 7FJ",
-    "opening-hour": "Monday - Friday, 07:00 - 18:00"
+    "opening": "Monday - Friday, 07:00 - 18:00"
   },
   {
     "street": "45 PEMBRIDGE VILLAS",
     "city":"London",
     "postcode": "W11 3EP",
-    "opening-hour": "MON-FRI 7AM-8PM (excluding bank holidays)"
+    "opening": "MON-FRI 7AM-8PM (excluding bank holidays)"
   },
   {
     "street": "Hill Partnerships, Site Office, Rectory Park Avenue",
     "city":"London",
     "postcode": "UB5 6SG",
-    "opening-hour": "Mon-Fri: 8am-5pm"
+    "opening": "Mon-Fri: 8am-5pm"
   },
   {
     "street": "Squires Garden Centre, Common Road, Stanmore",
     "city":"London",
     "postcode": "HA7 3JF",
-    "opening-hour": "Monday to Saturday 8am-6pm; Sunday10.30am-4.30pm. Closed Easter Sunday and Christmas Day"
+    "opening": "Monday to Saturday 8am-6pm; Sunday10.30am-4.30pm. Closed Easter Sunday and Christmas Day"
   },
   {
     "street": "A Pinchen (McLaren Site Office), Genotin Road",
     "city":"London",
     "postcode": "EN1 2AWG",
-    "opening-hour": "Limited Access: 7am - 6pm"
+    "opening": "Limited Access: 7am - 6pm"
   },
   {
     "street": "Clipper Logistics plc, Suez Road",
     "city":"London",
     "postcode": "EN3 7SN",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "Waltham Holy Cross Primary School, Quendon Drive",
     "city":"London",
     "postcode": "EN9 1LG",
-    "opening-hour": "Term Time Only"
+    "opening": "Term Time Only"
   },
   {
     "street": "Roof-Link, Eastbrook Road, Waltham Abbey",
     "city":"London",
     "postcode": "EN9 3AJ",
-    "opening-hour": "Monday to Friday 9am-5pm"
+    "opening": "Monday to Friday 9am-5pm"
   },
   {
     "street": "206 Upshire Road, Waltham Abbey",
     "city":"London",
     "postcode": "EN9 3PX",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "99 Wallis Road, Hackney Wick",
     "city":"London",
     "postcode": "E9 5LN",
-    "opening-hour": "Monday - Friday 7am - 6pm"
+    "opening": "Monday - Friday 7am - 6pm"
   },
   {
     "street": "41 Clarnico Lane, Balfour Beatty site office",
     "city":"London",
     "postcode": "E20 3AF",
-    "opening-hour": "Monday - Friday 0700 - 1900"
+    "opening": "Monday - Friday 0700 - 1900"
   },
   {
     "street": "Millfields Waste Depot, Millfields Road",
     "city":"London",
     "postcode": "E5 0AR",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "J B Riney, Waltham Forest, Low Hall Road Council Depot",
     "city":"London",
     "postcode": "E10 7AS",
-    "opening-hour": "Mon-Fri 0700-1600"
+    "opening": "Mon-Fri 0700-1600"
   },
   {
     "street": "Damira Docklands, Decontamination Room, Bow Common Lane",
     "city":"London",
     "postcode": "E3 4JJ",
-    "opening-hour": "Monday to Thursday 9am-5pm; Friday 8am-1pm"
+    "opening": "Monday to Thursday 9am-5pm; Friday 8am-1pm"
   },
   {
     "street": "25 Cabot Square, Tom Osmond, Level 9 Site Office",
     "city":"London",
     "postcode": "E14 4QA",
-    "opening-hour": "8am-6pm Monday - Friday"
+    "opening": "8am-6pm Monday - Friday"
   },
   {
     "street": "Chalegrove Properties Ltd, Landmark Pinnacle Site Office, Westferry Road",
     "city":"London",
     "postcode": "E14 8JH",
-    "opening-hour": "8am-6pm weekdays"
+    "opening": "8am-6pm weekdays"
   },
   {
     "street": "Wates Site Cabinets, University Way",
     "city":"London",
     "postcode": "E16 2RD",
-    "opening-hour": "Monday to Friday 8am-5.30pm"
+    "opening": "Monday to Friday 8am-5.30pm"
   },
   {
     "street": "Knaphill Working Men's Club, 2 Highclere Road",
     "city":"Woking",
     "postcode": "GU21 2PN",
-    "opening-hour": "Monday to Sunday 11am-midnight"
+    "opening": "Monday to Sunday 11am-midnight"
   },
   {
     "street": "Miltenyi Biotec Ltd, Almac House, Church Lane",
     "city":"Woking",
     "postcode": "GU24 9DR",
-    "opening-hour": "Monday to Friday 9am-5pm"
+    "opening": "Monday to Friday 9am-5pm"
   },
   {
     "street": "ABB Ltd, Boundary Road",
     "city":"Woking",
     "postcode": "GU21 5BS",
-    "opening-hour": "Mon-Fri 07:00 to 19:30"
+    "opening": "Mon-Fri 07:00 to 19:30"
   },
   {
     "street": "Ecobat Battery Technologies, Inside Warehouse, Unit 2 Riverside Business Centre",
     "city":"Woking",
     "postcode": "GU1 1DR",
-    "opening-hour": "08:00 - 17:00"
+    "opening": "08:00 - 17:00"
   },
   {
     "street": "UL International (UK) Ltd, Wornesh House, Old Portsmouth Road",
     "city":"Woking",
     "postcode": "GU3 1LR",
-    "opening-hour": "Monday to Friday 7.30am to 6.30pm"
+    "opening": "Monday to Friday 7.30am to 6.30pm"
   },
   {
     "street": "Richard Onslow Pub, High Street, Cranleigh",
     "city":"Surrey",
     "postcode": "GU6 8AF",
-    "opening-hour": "Pub opening hours"
+    "opening": "Pub opening hours"
   },
   {
     "street": "Environment Agency, Goldcrest House",
     "city":"Wrecclesham",
     "postcode": "GU6 8AF",
-    "opening-hour": "Monday to Friday 9am-5pm"
+    "opening": "Monday to Friday 9am-5pm"
   },
   {
     "street": "Binsted Pavillion, The Street",
     "city":"Binsted",
     "postcode": "GU34 4PB",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "Alton Community Centre, Amery Street",
     "city":"Alton",
     "postcode": "GU34 1HN",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "Winton Farm, Petersfield Road",
     "city":"Alton",
     "postcode": "SO24 0HB",
-    "opening-hour": "7.30am to 17.30pm week days"
+    "opening": "7.30am to 17.30pm week days"
   },
   {
     "street": "75 Hyde Street, Winchester",
     "city":"Alton",
     "postcode": "SO23 7DW",
-    "opening-hour": "0830-1800 Mon-Fr"
+    "opening": "0830-1800 Mon-Fr"
   },
   {
     "street": "Weeke Primary School, Stoney Lane",
     "city":"Winchester",
     "postcode": "SO22 6DR",
-    "opening-hour": "Monday to Friday 7am-6pm Term Time Only"
+    "opening": "Monday to Friday 7am-6pm Term Time Only"
   },
   {
     "street": "Winton House, St Peter Street, Winchester",
     "city":"Winchester",
     "postcode": "SO23 8BW",
-    "opening-hour": "9.00 am to 5.00 pm Monday to Friday"
+    "opening": "9.00 am to 5.00 pm Monday to Friday"
   },
   {
     "street": "West Meon Surgery, Doctors Lane, West Meon",
     "city":"Hampshire",
     "postcode": "GU32 1LR",
-    "opening-hour": "Mon, Wed and Fri 8am-6.30pm; Tuesday and Thursday 8am-4pm"
+    "opening": "Mon, Wed and Fri 8am-6.30pm; Tuesday and Thursday 8am-4pm"
   },
   {
     "street": "Church Road, Idmiston",
     "city":"Wiltshire",
     "postcode": "SP4 0AT",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "1 Clarendon Terrace, Stockbridge",
     "city":"Stockbridge",
     "postcode": "SO20 6EY",
-    "opening-hour": "Monday to Thursday 8.30am-5.30pm; Friday 8.30am-1pm"
+    "opening": "Monday to Thursday 8.30am-5.30pm; Friday 8.30am-1pm"
   },
   {
     "street": "Castle Combe Village Hall, Castle Combe",
     "city":"Stockbridge",
     "postcode": "SN14 7HU",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "Colerne Recreation Ground, Off Cleaves Avenue",
     "city":"Chippenham",
     "postcode": "SN14 7HU",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "Stowell Concrete Ltd, Edford Green, Holcomb",
     "city":"Chippenham",
     "postcode": "BA3 5DA",
-    "opening-hour": "Monday to Friday 7.30am-5pm"
+    "opening": "Monday to Friday 7.30am-5pm"
   },
   {
     "street": "Witham Village Hall, Witham Friary",
     "city":"Bath",
     "postcode": "BA11 5HF",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "East Harptree Village Hall (on wall by main entrance), Whitecross Road",
     "city":"Bristol",
     "postcode": "BS40 6AA",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "8 Meadway, Temple Cloud, Cameley Church of England VC Primary School",
     "city":"Bristol",
     "postcode": "BS39 5BD",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "Litton Village Hall, Litton Lane, Litton, Radstock",
     "city":"Bristol",
     "postcode": "BA3 4PW",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "The Old Telephone Kiosk, Next to 43 Hillcrest",
     "city":"Bristol",
     "postcode": "BS39 4AT",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "18 Bilbie Road, Chew Stoke",
     "city":"Bristol",
     "postcode": "BS40 8XW",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "Stowell Concrete Ltd, Edford Green, Holcombe",
     "city":"Somerset",
     "postcode": "BA3 5DA",
-    "opening-hour": "Monday to Friday 7.30am-5pm"
+    "opening": "Monday to Friday 7.30am-5pm"
   },
   {
     "street": "Wells Golf Club, Blackheath Lane",
     "city":"Somerset",
     "postcode": "BA5 3DS",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "Wheatsheaf Inn, Notting Hill Way",
     "city":"Axbridge",
     "postcode": "BS26 2NH",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "The Sexey's Arms Inn, Sexey's Road",
     "city":"Wedmore",
     "postcode": "BS28 4NT",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "Kingston Seymour Village Hall, Ham Lane",
     "city":"Bristol",
     "postcode": "BS21 6XE",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "Sand Bay Leisure Resort (AED held in Reception), Beach Road",
     "city":"Weston-super-Mare",
     "postcode": "BS22 9UR",
-    "opening-hour": "PAD-Anytime 24x7"
+    "opening": "PAD-Anytime 24x7"
   },
   {
     "street": "Willmott Dixon Construction Ltd - Site Office, Woodland Road",
     "city":"Oxford",
     "postcode": "OX3 7RH",
-    "opening-hour": "7am - 6pm Mon - Fri"
+    "opening": "7am - 6pm Mon - Fri"
   },
   {
     "street": "1 West Way, Botley Road",
     "city":"Oxford",
     "postcode": "OX2 0JB",
-    "opening-hour": "12pm-6pm 7 days a week"
+    "opening": "12pm-6pm 7 days a week"
   },
   {
     "street": "Damira Bury Knowle, Dental Practice",
     "city":"Oxford",
     "postcode": "OX3 9JA",
-    "opening-hour": "Monday to Friday 8am-5pm"
+    "opening": "Monday to Friday 8am-5pm"
   },
   {
     "street": "269-275 Iffley Road (Site entrance on Percy Street)",
     "city":"Oxford",
     "postcode": "OX4 4AA",
-    "opening-hour": "Mon-Fri 07.30-17.30. Sat 08.00-12.30. Closed Sundays and Bank Holidays"
+    "opening": "Mon-Fri 07.30-17.30. Sat 08.00-12.30. Closed Sundays and Bank Holidays"
   },
   {
     "street": "Damira Bury Knowle, Dental Practice",
     "city":"Oxford",
     "postcode": "OX3 9JA",
-    "opening-hour": "Monday to Friday 8am-5pm"
+    "opening": "Monday to Friday 8am-5pm"
   },
   {
     "street": "Unit 16, Wornal Park, Worminghall",
     "city":"Oxford",
     "postcode": "HP18 9JX",
-    "opening-hour": "Monday to Friday 8am-5pm"
+    "": "Monday to Friday 8am-5pm"
   }
 ]
 }

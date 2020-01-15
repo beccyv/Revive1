@@ -181,8 +181,9 @@ function initMap() {
   .then(function(response){
     response.json().then (function(data){
       for (i = 0; i < data.address.length; i++) {
-        geocode(data.address[i].street);
+        geocode(data.address[i].street, data.address[i].opening);
         calcTime(data.address[i].street);
+
         }
 
 
@@ -391,7 +392,7 @@ infoWindow = new google.maps.InfoWindow({
       'Error: Your browser doesn\'t support geolocation.');
       infoWindow.open(map);
     }
-  function geocode(location){
+  function geocode(location, openinghours){
     axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
       params:{
         address:location,
@@ -408,7 +409,7 @@ infoWindow = new google.maps.InfoWindow({
       });
       if (response.data.results[0].formatted_address){
         var infoWindow = new google.maps.InfoWindow({
-          content: response.data.results[0].formatted_address,
+          content: (response.data.results[0].formatted_address + '<br> ' + '<b>'+ openinghours + '</b>'),
           maxWidth: 150,
 	 pixelOffset: new google.maps.Size(0, -10)
 
