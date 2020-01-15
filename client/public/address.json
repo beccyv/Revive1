@@ -23,6 +23,20 @@
 
     }
   },
+
+  {
+  "street": "5 Appold Street",
+  "city": "London",
+  "postcode": "EC2A 2DA",
+  "country": "UK",
+  "opening-hour": "Access: PAD-Anytime 24x7",
+ "coords": {
+  "latitude": 51.521360,
+  "longitude": -0.080970
+ }
+},
+  {
+
   {
   "street": "5 Appold Street",
   "city": "London",
@@ -153,7 +167,8 @@
     "coords": {
       "latitude": 51.517540,
       "longitude": -0.077540
-     } 
+
+     }
   },
   {
     "street": "Adstream UK Ltd, 20-22 Commercial Stret",
@@ -164,7 +179,7 @@
     "coords": {
       "latitude": 51.518890,
       "longitude": -0.074480
-     } 
+     }
   },
   {
     "street": "Higgins Homes, Hemming Street",
@@ -175,7 +190,7 @@
     "coords": {
       "latitude": 51.520721,
       "longitude": -0.063950
-     } 
+     }
   },
   {
     "street": "Mile End Hospital, Accelerate Clinic, Bancroft Road",
@@ -186,7 +201,8 @@
     "coords": {
       "latitude": 51.525390,
       "longitude": -0.044470
-     } 
+
+     }
   },
   {
     "street": "St George City, Project Office, 9 Pennington Street",
@@ -197,7 +213,7 @@
     "coords": {
       "latitude": 51.508770,
       "longitude": -0.061740
-     } 
+     }
   },
   {
     "street": "CFIELD CONSTRUCTION, ROSSENDALE STREET, CAZENOVE",
@@ -606,169 +622,169 @@
     "street": "7 Fosbury Mews",
     "city":"London",
     "postcode": "W2 3JE",
-    "opening-hour": "Mon-Fri 8am - 6pm" 
+    "opening-hour": "Mon-Fri 8am - 6pm"
   },
   {
     "street": "54 Wood Lane, White City Development",
     "city":"London",
     "postcode": "W12 7RQ",
-    "opening-hour": "Monday to Friday 7am-6pm" 
+    "opening-hour": "Monday to Friday 7am-6pm"
+
   },
   {
     "street": "26 Hill Road, St. Johns Wood",
     "city":"London",
     "postcode": "NW8 9QG",
-    "opening-hour": "PAD-Anytime 24x7" 
+    "opening-hour": "PAD-Anytime 24x7"
   },
   {
     "street": "Westminster Synagogue, Rutland Gardens",
     "city":"London",
     "postcode": "SW7 1BX",
-    "opening-hour": "Monday to Friday 7am-10pm; Saturday 8am-2pm" 
+    "opening-hour": "Monday to Friday 7am-10pm; Saturday 8am-2pm"
   },
   {
     "street": "36 Ennismore Gardens",
     "city":"London",
     "postcode": "SW7 1AF",
-    "opening-hour": "8am to 5.30pm" 
+    "opening-hour": "8am to 5.30pm"
   },
   {
     "street": "Baden-Powell House, 65-67 Queens Gate",
     "city":"London",
     "postcode": "SW7 5JS",
-    "opening-hour": "PAD-Anytime 24x7" 
+    "opening-hour": "PAD-Anytime 24x7"
   },
   {
     "street": "258 Fulham Road",
     "city":"London",
     "postcode": "SW10 9EL",
-    "opening-hour": "11am-4pm" 
+    "opening-hour": "11am-4pm"
   },
   {
     "street": "43 Howland Street",
     "city":"London",
     "postcode": "W1T 4AY",
-    "opening-hour": "Mon-Fri 8am - 6pm" 
+    "opening-hour": "Mon-Fri 8am - 6pm"
   },
   {
     "street": "388 High Road, Wembley",
     "city":"London",
     "postcode": "HA9 6AR",
-    "opening-hour": "Mon - Fri 09:00 - 18:00 hrs" 
+    "opening-hour": "Mon - Fri 09:00 - 18:00 hrs"
   },
   {
     "street": "21, Wembley Park Drive, Wembley",
     "city":"London",
     "postcode": "NW2 5SS",
-    "opening-hour": "Mon - Fri 09:00 - 18:00 hrs" 
+    "opening-hour": "Mon - Fri 09:00 - 18:00 hrs"
   },
   {
     "street": "Edgware Road, Cricklewood",
     "city":"London",
     "postcode": "NW2 6GJ",
-    "opening-hour": "Monday to Friday 7.30am-5.30pm; Saturday 8am-12.30pm" 
+    "opening-hour": "Monday to Friday 7.30am-5.30pm; Saturday 8am-12.30pm"
   },
   {
     "street": "ENGIE Site Office, Oxford Road, Kilburn",
     "city":"London",
     "postcode": "NW6 5SL",
-    "opening-hour": "Monday - Friday, 07:00 - 18:00" 
   },
   {
     "street": "Television Centre, In Site Security Office, Wood Lane, Shepherds Bush",
     "city":"London",
     "postcode": "W12 7FJ",
-    "opening-hour": "Monday - Friday, 07:00 - 18:00" 
+    "opening-hour": "Monday - Friday, 07:00 - 18:00"
   },
   {
     "street": "45 PEMBRIDGE VILLAS",
     "city":"London",
     "postcode": "W11 3EP",
-    "opening-hour": "MON-FRI 7AM-8PM (excluding bank holidays)" 
+    "opening-hour": "MON-FRI 7AM-8PM (excluding bank holidays)"
   },
   {
     "street": "Hill Partnerships, Site Office, Rectory Park Avenue",
     "city":"London",
     "postcode": "UB5 6SG",
-    "opening-hour": "Mon-Fri: 8am-5pm" 
+    "opening-hour": "Mon-Fri: 8am-5pm"
   },
   {
     "street": "Squires Garden Centre, Common Road, Stanmore",
     "city":"London",
     "postcode": "HA7 3JF",
-    "opening-hour": "Monday to Saturday 8am-6pm; Sunday10.30am-4.30pm. Closed Easter Sunday and Christmas Day" 
+    "opening-hour": "Monday to Saturday 8am-6pm; Sunday10.30am-4.30pm. Closed Easter Sunday and Christmas Day"
   },
   {
     "street": "A Pinchen (McLaren Site Office), Genotin Road",
     "city":"London",
     "postcode": "EN1 2AWG",
-    "opening-hour": "Limited Access: 7am - 6pm" 
+    "opening-hour": "Limited Access: 7am - 6pm"
   },
   {
     "street": "Clipper Logistics plc, Suez Road",
     "city":"London",
     "postcode": "EN3 7SN",
-    "opening-hour": "PAD-Anytime 24x7" 
+    "opening-hour": "PAD-Anytime 24x7"
   },
   {
     "street": "Waltham Holy Cross Primary School, Quendon Drive",
     "city":"London",
     "postcode": "EN9 1LG",
-    "opening-hour": "Term Time Only" 
+    "opening-hour": "Term Time Only"
   },
   {
     "street": "Roof-Link, Eastbrook Road, Waltham Abbey",
     "city":"London",
     "postcode": "EN9 3AJ",
-    "opening-hour": "Monday to Friday 9am-5pm" 
+    "opening-hour": "Monday to Friday 9am-5pm"
   },
   {
     "street": "206 Upshire Road, Waltham Abbey",
     "city":"London",
     "postcode": "EN9 3PX",
-    "opening-hour": "PAD-Anytime 24x7" 
+    "opening-hour": "PAD-Anytime 24x7"
   },
   {
     "street": "99 Wallis Road, Hackney Wick",
     "city":"London",
     "postcode": "E9 5LN",
-    "opening-hour": "Monday - Friday 7am - 6pm" 
+    "opening-hour": "Monday - Friday 7am - 6pm"
   },
   {
     "street": "41 Clarnico Lane, Balfour Beatty site office",
     "city":"London",
     "postcode": "E20 3AF",
-    "opening-hour": "Monday - Friday 0700 - 1900" 
+    "opening-hour": "Monday - Friday 0700 - 1900"
   },
   {
     "street": "Millfields Waste Depot, Millfields Road",
     "city":"London",
     "postcode": "E5 0AR",
-    "opening-hour": "PAD-Anytime 24x7" 
+    "opening-hour": "PAD-Anytime 24x7"
   },
   {
     "street": "J B Riney, Waltham Forest, Low Hall Road Council Depot",
     "city":"London",
     "postcode": "E10 7AS",
-    "opening-hour": "Mon-Fri 0700-1600" 
+    "opening-hour": "Mon-Fri 0700-1600"
   },
   {
     "street": "Damira Docklands, Decontamination Room, Bow Common Lane",
     "city":"London",
     "postcode": "E3 4JJ",
-    "opening-hour": "Monday to Thursday 9am-5pm; Friday 8am-1pm" 
+    "opening-hour": "Monday to Thursday 9am-5pm; Friday 8am-1pm"
   },
   {
     "street": "25 Cabot Square, Tom Osmond, Level 9 Site Office",
     "city":"London",
     "postcode": "E14 4QA",
-    "opening-hour": "8am-6pm Monday - Friday" 
+    "opening-hour": "8am-6pm Monday - Friday"
   },
   {
     "street": "Chalegrove Properties Ltd, Landmark Pinnacle Site Office, Westferry Road",
     "city":"London",
     "postcode": "E14 8JH",
-    "opening-hour": "8am-6pm weekdays" 
+    "opening-hour": "8am-6pm weekdays"
   },
   {
     "street": "Wates Site Cabinets, University Way",
