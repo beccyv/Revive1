@@ -121,6 +121,7 @@
 </br>
     <div id="map"></div>
     <div id="directionsPanel" style="float:right;width:30%;height 100%"></div>
+    <div id="container"></div>
 <!-- <script type="text/javascript" src="address.json"></script> -->
 <script>
 /* This is the json link link */ -->
@@ -182,6 +183,36 @@ function initMap() {
     });
   }
 
+//haverstine function for Distance
+function haversineDistance(latlngA, latlngB) {
+  var toRadian = angle => (Math.PI / 180) * angle;
+  var distance = (a, b) => (Math.PI / 180) * (a - b);
+  const RADIUS_OF_EARTH_IN_KM = 6371;
+
+  let lat1 = latlngA.lat;
+  let lat2 = latlngB.lat;
+  const lon1 = latlngA.lng;
+  const lon2 = latlngB.lng;
+
+  const dLat = distance(lat2, lat1);
+  const dLon = distance(lon2, lon1);
+
+  lat1 = toRadian(lat1);
+  lat2 = toRadian(lat2);
+
+  // Haversine Formula
+  const a =
+    Math.pow(Math.sin(dLat / 2), 2) +
+    Math.pow(Math.sin(dLon / 2), 2) * Math.cos(lat1) * Math.cos(lat2);
+  const c = 2 * Math.asin(Math.sqrt(a));
+
+  let finalDistance = RADIUS_OF_EARTH_IN_KM * c;
+
+  console.log("HELLO", finalDistance);
+
+  return finalDistance;
+};
+
 //new calcTime function console.log(time) or could return time? But issue with usage on google maps API (see console)
   function calcTime(destination) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -195,13 +226,52 @@ function initMap() {
       destination: destination,
       travelMode: 'WALKING',
     };
-    directionsService.route(request, function(result) {
-      //without the setPanel, just see a line which represents the journey
-      //without the setPanel, just see a line which represents the journey
-      var time = result.routes[0].legs[0].duration.text
-      console.log(time)
-    });
-  }
+    console.log(pos);
+    console.log(destination);
+
+    axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+        params:{
+          address:destination,
+          key:'%REACT_APP_API_KEY%'
+        }
+      })
+      .then(function(response){
+        var destinationLatLng = response.data.results[0].geometry.location
+        // console.log(pos);
+        // console.log(destinationLatLng);
+        var howFar = haversineDistance(pos, destinationLatLng)
+        if (howFar < 0.8){
+          directionsService.route(request, function(result) {
+            //without the setPanel, just see a line which represents the journey
+            //without the setPanel, just see a line which represents the journey
+            var time = result.routes[0].legs[0].duration.text
+            var addressNearest = result.routes[0].legs[0].end_address
+            console.log(addressNearest)
+            console.log(time)
+            // LET'S SAY THAT WE HAVE A SIMPLE FLAT ARRAY
+            var data = [addressNearest, time];
+
+            // DRAW THE HTML TABLE
+            var perrow =  2, // 2 items per row
+                html = "<table><tr>";
+
+            // Loop through array and add table cells
+            for (var i=0; i<data.length; i++) {
+              html += "<td>" + data[i] + "</td>";
+              // Break into next row
+              var next = i+1;
+              if (next%perrow==0 && next!=data.length) {
+                html += "</tr><tr>";
+              }
+            }
+            html += "</tr></table>";
+
+            // ATTACH HTML TO CONTAINER
+            document.getElementById("container").innerHTML = html;
+          });
+        }
+      });
+    }
 
   //Marianne's code ended here
   //creating a waitrose variable with its location

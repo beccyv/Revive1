@@ -250,7 +250,7 @@
   "opening-hour": "Monday to Friday 7.30am-5.30pm"
 },
 {
-  "street": "3 Corners Centre, Northampton Road",
+  "street": "40 Northampton Road London",
   "city":"London",
   "postcode": "EC1R 0HU",
   "country": "UK",
@@ -528,13 +528,6 @@
 "postcode": "EC1V 9AZ",
 "country": "UK",
 "opening-hour": "Monday to Friday 8.30am-9pm"
-},
-{
-"street": "99 Golden Lane ",
-"city":"London",
-"postcode": "EC1Y 0TZ",
-"country": "UK",
-"opening-hour": "Monday to Friday 0800 - 1800"
 },
 {
     "street": "200 Grays Inn Road",
