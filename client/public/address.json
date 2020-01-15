@@ -24,18 +24,6 @@
     }
   },
 
-  {
-  "street": "5 Appold Street",
-  "city": "London",
-  "postcode": "EC2A 2DA",
-  "country": "UK",
-  "opening-hour": "Access: PAD-Anytime 24x7",
- "coords": {
-  "latitude": 51.521360,
-  "longitude": -0.080970
- }
-},
-
 
   {
   "street": "5 Appold Street",
@@ -252,14 +240,14 @@
     "opening-hour": "Limited Access, Mon - Sun 8am - 9pm (excluding bank holidays)"
   },
 {
-  "street": "167 - 173 Goswell Road Islington",
+  "street": "167 - 173 Goswell Road Islington London",
   "city":"London",
   "postcode": "EC1V 7HD",
   "country": "UK",
   "opening-hour": "7 - 6:30 Mon-Friday"
 },
 {
-  "street": "Turnpike House Higgins Site Office, Goswell Road",
+  "street": "Flat 158 Turnpike House Goswell Road",
   "city":"London",
   "postcode": "EC1V 7PB",
   "country": "UK",
@@ -377,13 +365,7 @@
   "country": "UK",
   "opening-hour": "Monday to Friday 8.30am-9pm"
 },
-{
-  "street": "99 Golden Lane ",
-  "city":"London",
-  "postcode": "EC1Y 0TZ",
-  "country": "UK",
-  "opening-hour": "Monday to Friday 0800 - 1800"
-},
+
 {
   "street": "53-64 chanceryLane",
   "city":"London",
