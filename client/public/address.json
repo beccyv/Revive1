@@ -23,6 +23,20 @@
 
     }
   },
+
+  {
+  "street": "5 Appold Street",
+  "city": "London",
+  "postcode": "EC2A 2DA",
+  "country": "UK",
+  "opening-hour": "Access: PAD-Anytime 24x7",
+ "coords": {
+  "latitude": 51.521360,
+  "longitude": -0.080970
+ }
+},
+  {
+
   {
   "street": "5 Appold Street",
   "city": "London",
@@ -153,6 +167,7 @@
     "coords": {
       "latitude": 51.517540,
       "longitude": -0.077540
+
      }
   },
   {
@@ -186,6 +201,7 @@
     "coords": {
       "latitude": 51.525390,
       "longitude": -0.044470
+
      }
   },
   {
@@ -613,6 +629,7 @@
     "city":"London",
     "postcode": "W12 7RQ",
     "opening-hour": "Monday to Friday 7am-6pm"
+
   },
   {
     "street": "26 Hill Road, St. Johns Wood",
@@ -672,7 +689,6 @@
     "street": "ENGIE Site Office, Oxford Road, Kilburn",
     "city":"London",
     "postcode": "NW6 5SL",
-    "opening-hour": "Monday - Friday, 07:00 - 18:00"
   },
   {
     "street": "Television Centre, In Site Security Office, Wood Lane, Shepherds Bush",
@@ -774,7 +790,229 @@
     "street": "Wates Site Cabinets, University Way",
     "city":"London",
     "postcode": "E16 2RD",
-    "opening-hour": "Monday to Friday 8am-5.30pm"
+    "opening-hour": "Monday to Friday 8am-5.30pm" 
+  },
+  {
+    "street": "Knaphill Working Men's Club, 2 Highclere Road",
+    "city":"Woking",
+    "postcode": "GU21 2PN",
+    "opening-hour": "Monday to Sunday 11am-midnight" 
+  },
+  {
+    "street": "Miltenyi Biotec Ltd, Almac House, Church Lane",
+    "city":"Woking",
+    "postcode": "GU24 9DR",
+    "opening-hour": "Monday to Friday 9am-5pm" 
+  },
+  {
+    "street": "ABB Ltd, Boundary Road",
+    "city":"Woking",
+    "postcode": "GU21 5BS",
+    "opening-hour": "Mon-Fri 07:00 to 19:30" 
+  },
+  {
+    "street": "Ecobat Battery Technologies, Inside Warehouse, Unit 2 Riverside Business Centre",
+    "city":"Woking",
+    "postcode": "GU1 1DR",
+    "opening-hour": "08:00 - 17:00" 
+  },
+  {
+    "street": "UL International (UK) Ltd, Wornesh House, Old Portsmouth Road",
+    "city":"Woking",
+    "postcode": "GU3 1LR",
+    "opening-hour": "Monday to Friday 7.30am to 6.30pm" 
+  },
+  {
+    "street": "Richard Onslow Pub, High Street, Cranleigh",
+    "city":"Surrey",
+    "postcode": "GU6 8AF",
+    "opening-hour": "Pub opening hours" 
+  },
+  {
+    "street": "Environment Agency, Goldcrest House",
+    "city":"Wrecclesham",
+    "postcode": "GU6 8AF",
+    "opening-hour": "Monday to Friday 9am-5pm" 
+  },
+  {
+    "street": "Binsted Pavillion, The Street",
+    "city":"Binsted",
+    "postcode": "GU34 4PB",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "Alton Community Centre, Amery Street",
+    "city":"Alton",
+    "postcode": "GU34 1HN",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "Winton Farm, Petersfield Road",
+    "city":"Alton",
+    "postcode": "SO24 0HB",
+    "opening-hour": "7.30am to 17.30pm week days" 
+  },
+  {
+    "street": "75 Hyde Street, Winchester",
+    "city":"Alton",
+    "postcode": "SO23 7DW",
+    "opening-hour": "0830-1800 Mon-Fr" 
+  },
+  {
+    "street": "Weeke Primary School, Stoney Lane",
+    "city":"Winchester",
+    "postcode": "SO22 6DR",
+    "opening-hour": "Monday to Friday 7am-6pm Term Time Only" 
+  },
+  {
+    "street": "Winton House, St Peter Street, Winchester",
+    "city":"Winchester",
+    "postcode": "SO23 8BW",
+    "opening-hour": "9.00 am to 5.00 pm Monday to Friday" 
+  },
+  {
+    "street": "West Meon Surgery, Doctors Lane, West Meon",
+    "city":"Hampshire",
+    "postcode": "GU32 1LR",
+    "opening-hour": "Mon, Wed and Fri 8am-6.30pm; Tuesday and Thursday 8am-4pm" 
+  },
+  {
+    "street": "Church Road, Idmiston",
+    "city":"Wiltshire",
+    "postcode": "SP4 0AT",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "1 Clarendon Terrace, Stockbridge",
+    "city":"Stockbridge",
+    "postcode": "SO20 6EY",
+    "opening-hour": "Monday to Thursday 8.30am-5.30pm; Friday 8.30am-1pm" 
+  },
+  {
+    "street": "Castle Combe Village Hall, Castle Combe",
+    "city":"Stockbridge",
+    "postcode": "SN14 7HU",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "Colerne Recreation Ground, Off Cleaves Avenue",
+    "city":"Chippenham",
+    "postcode": "SN14 7HU",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "Stowell Concrete Ltd, Edford Green, Holcomb",
+    "city":"Chippenham",
+    "postcode": "BA3 5DA",
+    "opening-hour": "Monday to Friday 7.30am-5pm" 
+  },
+  {
+    "street": "Witham Village Hall, Witham Friary",
+    "city":"Bath",
+    "postcode": "BA11 5HF",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "East Harptree Village Hall (on wall by main entrance), Whitecross Road",
+    "city":"Bristol",
+    "postcode": "BS40 6AA",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "8 Meadway, Temple Cloud, Cameley Church of England VC Primary School",
+    "city":"Bristol",
+    "postcode": "BS39 5BD",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "Litton Village Hall, Litton Lane, Litton, Radstock",
+    "city":"Bristol",
+    "postcode": "BA3 4PW",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "The Old Telephone Kiosk, Next to 43 Hillcrest",
+    "city":"Bristol",
+    "postcode": "BS39 4AT",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "18 Bilbie Road, Chew Stoke",
+    "city":"Bristol",
+    "postcode": "BS40 8XW",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "Stowell Concrete Ltd, Edford Green, Holcombe",
+    "city":"Somerset",
+    "postcode": "BA3 5DA",
+    "opening-hour": "Monday to Friday 7.30am-5pm" 
+  },
+  {
+    "street": "Wells Golf Club, Blackheath Lane",
+    "city":"Somerset",
+    "postcode": "BA5 3DS",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "Wheatsheaf Inn, Notting Hill Way",
+    "city":"Axbridge",
+    "postcode": "BS26 2NH",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "The Sexey's Arms Inn, Sexey's Road",
+    "city":"Wedmore",
+    "postcode": "BS28 4NT",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "Kingston Seymour Village Hall, Ham Lane",
+    "city":"Bristol",
+    "postcode": "BS21 6XE",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "Sand Bay Leisure Resort (AED held in Reception), Beach Road",
+    "city":"Weston-super-Mare",
+    "postcode": "BS22 9UR",
+    "opening-hour": "PAD-Anytime 24x7" 
+  },
+  {
+    "street": "Willmott Dixon Construction Ltd - Site Office, Woodland Road",
+    "city":"Oxford",
+    "postcode": "OX3 7RH",
+    "opening-hour": "7am - 6pm Mon - Fri" 
+  },
+  {
+    "street": "1 West Way, Botley Road",
+    "city":"Oxford",
+    "postcode": "OX2 0JB",
+    "opening-hour": "12pm-6pm 7 days a week" 
+  },
+  {
+    "street": "Damira Bury Knowle, Dental Practice",
+    "city":"Oxford",
+    "postcode": "OX3 9JA",
+    "opening-hour": "Monday to Friday 8am-5pm" 
+  },
+  {
+    "street": "269-275 Iffley Road (Site entrance on Percy Street)",
+    "city":"Oxford",
+    "postcode": "OX4 4AA",
+    "opening-hour": "Mon-Fri 07.30-17.30. Sat 08.00-12.30. Closed Sundays and Bank Holidays" 
+  },
+  {
+    "street": "Damira Bury Knowle, Dental Practice",
+    "city":"Oxford",
+    "postcode": "OX3 9JA",
+    "opening-hour": "Monday to Friday 8am-5pm" 
+  },
+  {
+    "street": "Unit 16, Wornal Park, Worminghall",
+    "city":"Oxford",
+    "postcode": "HP18 9JX",
+    "opening-hour": "Monday to Friday 8am-5pm" 
   }
 ]
 }
