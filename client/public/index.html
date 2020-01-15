@@ -23,7 +23,7 @@
 
     <!--****fontawesome cdn link*******-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-
+    <script src="https://assets.what3words.com/sdk/v3/what3words.js?key=B9YFP1SD"></script>
     <!--***************<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />-->
     <style>
       /* Always set the map height explicitly to define the size of the div
@@ -275,7 +275,20 @@ function initMap() {
       });
     }
   }
+
+
   </script>
+  <script>
+  what3words.api.convertTo3wa({lat:51.508344, lng:-0.12549900}).then(function(response) {
+   console.log("[convertTo3wa]", response);
+   console.log(response.words);
+   var whatthree = response.words
+   var whatthreeformatted = `<ul class="list-group">
+      <li class="list-group-item">${whatthree}</li></ul>`;
+      document.getElementById('whatthreewordscapsule').innerHTML = whatthreeformatted;
+});
+
+</script>
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=%REACT_APP_API_KEY%&callback=initMap">
   </script>
@@ -283,6 +296,9 @@ function initMap() {
   <!-- </br>
   </br>
   </br> -->
+
+  <div id ="whatthreewordscapsule">hi<div>
+
 
     <div class="container">
 
