@@ -154,6 +154,7 @@ function initMap() {
   directionsRenderer.setMap(map);
   //matches with the directionsPanel div outside of the script tag
   directionsRenderer.setPanel(document.getElementById('directionsPanel'));
+
   function calcRoute(destination) {
     navigator.geolocation.getCurrentPosition(function(position) {
       pos = {
@@ -175,6 +176,8 @@ function initMap() {
   //creating a waitrose variable with its location
   var image = 'heart3.svg'
   var image2 = 'locationdotsmaller.svg'
+
+
   // addMarker({
   //   coords:{lat: 51.520161, lng: -0.103530},
   //   content: 'Farringdon Station, Cowcross St, London, EC1M 6BY'
@@ -224,6 +227,7 @@ function initMap() {
       };
       addGeoMarker(pos);
       infoWindow.setPosition(pos);
+      whatthree(pos);
       //This is to set the wording on the marker
       infoWindow.setContent('You are here');
       infoWindow.open(map);
@@ -279,7 +283,9 @@ function initMap() {
 
   </script>
   <script>
-  what3words.api.convertTo3wa({lat:51.508344, lng:-0.12549900}).then(function(response) {
+function whatthree(pos){
+
+  what3words.api.convertTo3wa(pos).then(function(response) {
    console.log("[convertTo3wa]", response);
    console.log(response.words);
    var whatthree = response.words
@@ -287,6 +293,8 @@ function initMap() {
       <li class="list-group-item">${whatthree}</li></ul>`;
       document.getElementById('whatthreewordscapsule').innerHTML = whatthreeformatted;
 });
+}
+
 
 </script>
   <script async defer
