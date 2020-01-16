@@ -190,6 +190,8 @@ function initMap() {
     })
   })
 
+
+
 //example of adding to JSON file
         // for (var i=0; i<data.length; i++) {
         //     data[i].department = "Administration";
@@ -425,20 +427,20 @@ infoWindow = new google.maps.InfoWindow({
       });
     }
   }
+  function whatthree(pos){
 
+    what3words.api.convertTo3wa(pos).then(function(response) {
+     console.log("[convertTo3wa]", response);
+     console.log(response.words);
+     var whatthree = response.words
+     var whatthreeformatted = `<ul class="list-group">
+        <li class="list-group-item">${whatthree}</li></ul>`;
+        document.getElementById('whatthreewordscapsule').innerHTML = whatthreeformatted;
+  });
+  }
   </script>
 <script>
-function whatthree(pos){
 
-  what3words.api.convertTo3wa(pos).then(function(response) {
-   console.log("[convertTo3wa]", response);
-   console.log(response.words);
-   var whatthree = response.words
-   var whatthreeformatted = `<ul class="list-group">
-      <li class="list-group-item">${whatthree}</li></ul>`;
-      document.getElementById('whatthreewordscapsule').innerHTML = whatthreeformatted;
-});
-}
 
 
 </script>
@@ -450,7 +452,7 @@ function whatthree(pos){
   </br>
   </br> -->
 
-  <div id ="whatthreewordscapsule">hi<div>
+  <div id ="whatthreewordscapsule"></div>
 
 
     <div class="container">
