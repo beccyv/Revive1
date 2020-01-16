@@ -350,13 +350,7 @@
   "country": "UK",
   "opening": "Monday to Friday 8.30am-9pm"
 },
-{
-  "street": "99 Golden Lane,London ",
-  "city":"London",
-  "postcode": "EC1Y 0TZ",
-  "country": "UK",
-  "opening": "Monday to Friday 0800 - 1800"
-},
+
 {
   "street": "53-64 chanceryLane, London",
   "city":"London",
@@ -406,13 +400,7 @@
   "country": "UK",
   "opening": "Limited Access, Monday to Friday 8.30am-5pm"
 },
-{
-  "street": "St Lukes Community Centre, Central Street, London",
-  "city":"London",
-  "postcode": "EC1V 8AJ",
-  "country": "UK",
-  "opening": "Limited Access, Mon - Sun 8am - 9pm (excluding bank holidays)"
-},
+
 {
 "street": "City Tower, Basinghall Street, London",
 "city":"London",
@@ -511,13 +499,7 @@
 "country": "UK",
 "opening": "PAD-Anytime 24x7"
 },
-{
-"street": "Admiral House, 76-78 Old street, London",
-"city":"London",
-"postcode": "EC1V 9AZ",
-"country": "UK",
-"opening": "Monday to Friday 8.30am-9pm"
-},
+
 {
 "street": "99 Golden Lane, London ",
 "city":"London",
