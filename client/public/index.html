@@ -160,6 +160,13 @@
 <!-- <script type="text/javascript" src="address.json"></script> -->
  <div id="container"></div>
 <script>
+navigator.geolocation.getCurrentPosition(function(position) {
+  var pos = {
+    lat: position.coords.latitude,
+    lng: position.coords.longitude
+  };
+})
+
 /* This is the json link link */ -->
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see the error "The Geolocation service
@@ -182,11 +189,8 @@ function initMap() {
     response.json().then (function(data){
       for (i = 0; i < data.address.length; i++) {
         geocode(data.address[i].street, data.address[i].opening);
-        calcTime(data.address[i].street);
-
+        // calcTime(data.address[i].street);
         }
-
-
     })
   })
 
@@ -256,67 +260,67 @@ function haversineDistance(latlngA, latlngB) {
 };
 
 //new calcTime function console.log(time) or could return time? But issue with usage on google maps API (see console)
-  function calcTime(destination) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      }
-    })
-    var request = {
-      origin: pos,
-      destination: destination,
-      travelMode: 'WALKING',
-    };
-
-    axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
-        params:{
-          address:destination,
-          key:'%REACT_APP_API_KEY%'
-        }
-      })
-      .then(function(response){
-        var destinationLatLng = response.data.results[0].geometry.location
-        // console.log(pos);
-        // console.log(destinationLatLng);
-        var howFar = haversineDistance(pos, destinationLatLng)
-        if (howFar < 0.5){
-
-
-          directionsService.route(request, function(result) {
-            //without the setPanel, just see a line which represents the journey
-            //without the setPanel, just see a line which represents the journey
-            var time = result.routes[0].legs[0].duration.text
-            var addressNearest = result.routes[0].legs[0].end_address
-
-            // LET'S SAY THAT WE HAVE A SIMPLE FLAT ARRAY
-            arrayreb.push([addressNearest, time]);
-
-
-            var data = [addressNearest, time];
-
-
-            // DRAW THE HTML TABLE
-            var perrow =  1, // 2 items per row
-                html = "<table><tr>";
-
-            // Loop through array and add table cells
-            for (var i=0; i<arrayreb.length; i++) {
-              html += "<td>" + arrayreb[i][0] + "</td>" + "<td>"+ "</td>" + "<td>"+ "</td>" + "<td>" + arrayreb[i][1] + "</td>";
-              // Break into next row
-              var next = i+1;
-              if (next%perrow==0 && next!=arrayreb.length) {
-                html += "</tr><tr>";
-              }
-            }
-            html += "</tr></table>";
-
-            // ATTACH HTML TO CONTAINER
-            document.getElementById("container").innerHTML = html;
-          });
-        }
-      });
-    }
+  // function calcTime(destination) {
+  //   navigator.geolocation.getCurrentPosition(function(position) {
+  //     pos = {
+  //       lat: position.coords.latitude,
+  //       lng: position.coords.longitude
+  //     }
+  //   })
+  //   var request = {
+  //     origin: pos,
+  //     destination: destination,
+  //     travelMode: 'WALKING',
+  //   };
+  //
+  //   axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+  //       params:{
+  //         address:destination,
+  //         key:'%REACT_APP_API_KEY%'
+  //       }
+  //     })
+  //     .then(function(response){
+  //       var destinationLatLng = response.data.results[0].geometry.location
+  //       // console.log(pos);
+  //       // console.log(destinationLatLng);
+  //       var howFar = haversineDistance(pos, destinationLatLng)
+  //       if (howFar < 0.5){
+  //
+  //
+  //         directionsService.route(request, function(result) {
+  //           //without the setPanel, just see a line which represents the journey
+  //           //without the setPanel, just see a line which represents the journey
+  //           var time = result.routes[0].legs[0].duration.text
+  //           var addressNearest = result.routes[0].legs[0].end_address
+  //
+  //           // LET'S SAY THAT WE HAVE A SIMPLE FLAT ARRAY
+  //           arrayreb.push([addressNearest, time]);
+  //
+  //
+  //           var data = [addressNearest, time];
+  //
+  //
+  //           // DRAW THE HTML TABLE
+  //           var perrow =  1, // 2 items per row
+  //               html = "<table><tr>";
+  //
+  //           // Loop through array and add table cells
+  //           for (var i=0; i<arrayreb.length; i++) {
+  //             html += "<td>" + arrayreb[i][0] + "</td>" + "<td>"+ "</td>" + "<td>"+ "</td>" + "<td>" + arrayreb[i][1] + "</td>";
+  //             // Break into next row
+  //             var next = i+1;
+  //             if (next%perrow==0 && next!=arrayreb.length) {
+  //               html += "</tr><tr>";
+  //             }
+  //           }
+  //           html += "</tr></table>";
+  //
+  //           // ATTACH HTML TO CONTAINER
+  //           document.getElementById("container").innerHTML = html;
+  //         });
+  //       }
+  //     });
+  //   }
 
   //Marianne's code ended here
   //creating a waitrose variable with its location
@@ -394,6 +398,71 @@ infoWindow = new google.maps.InfoWindow({
       'Error: Your browser doesn\'t support geolocation.');
       infoWindow.open(map);
     }
+
+    //start of calcTime
+    function calcTime(destination) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        }
+      })
+
+      var request = {
+        origin: pos,
+        destination: destination,
+        travelMode: 'WALKING',
+      };
+
+      // axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+      //     params:{
+      //       address:destination,
+      //       key:'%REACT_APP_API_KEY%'
+      //     }
+      //   })
+        // .then(function(response){
+          // var destinationLatLng = response.data.results[0].geometry.location
+          // console.log(pos);
+          // console.log(destinationLatLng);
+          var howFar = haversineDistance(pos, destination)
+          if (howFar < 0.5){
+
+
+            directionsService.route(request, function(result) {
+              //without the setPanel, just see a line which represents the journey
+              //without the setPanel, just see a line which represents the journey
+              var time = result.routes[0].legs[0].duration.text
+              var addressNearest = result.routes[0].legs[0].end_address
+
+              // LET'S SAY THAT WE HAVE A SIMPLE FLAT ARRAY
+              arrayreb.push([addressNearest, time]);
+
+
+              var data = [addressNearest, time];
+
+
+              // DRAW THE HTML TABLE
+              var perrow =  1, // 2 items per row
+                  html = "<table><tr>";
+
+              // Loop through array and add table cells
+              for (var i=0; i<arrayreb.length; i++) {
+                html += "<td>" + arrayreb[i][0] + "</td>" + "<td>"+ "</td>" + "<td>"+ "</td>" + "<td>" + arrayreb[i][1] + "</td>";
+                // Break into next row
+                var next = i+1;
+                if (next%perrow==0 && next!=arrayreb.length) {
+                  html += "</tr><tr>";
+                }
+              }
+              html += "</tr></table>";
+
+              // ATTACH HTML TO CONTAINER
+              document.getElementById("container").innerHTML = html;
+            });
+          }
+        };
+
+
   function geocode(location, openinghours){
     axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
       params:{
@@ -409,6 +478,8 @@ infoWindow = new google.maps.InfoWindow({
         position: response.data.results[0].geometry.location,
         icon: image
       });
+      calcTime(response.data.results[0].geometry.location);
+
       if (response.data.results[0].formatted_address){
         var infoWindow = new google.maps.InfoWindow({
           content: (response.data.results[0].formatted_address + '<br> ' + '<b>'+ openinghours + '</b>'),
@@ -420,24 +491,28 @@ infoWindow = new google.maps.InfoWindow({
             infoWindow.open(map, marker);
             calcRoute(response.data.results[0].geometry.location);
           });
+
         }
       })
       .catch(function(error){
         console.log(error)
       });
     }
-  }
+
+
+
+
+
   function whatthree(pos){
 
     what3words.api.convertTo3wa(pos).then(function(response) {
-     console.log("[convertTo3wa]", response);
-     console.log(response.words);
      var whatthree = response.words
      var whatthreeformatted = `<ul class="list-group">
         <li class="list-group-item">${whatthree}</li></ul>`;
         document.getElementById('whatthreewordscapsule').innerHTML = whatthreeformatted;
   });
   }
+}
   </script>
 <script>
 
