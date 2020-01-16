@@ -1,7 +1,7 @@
 ##   Revive App :heart:
 ### Project Title
 ​
-Create an app that finds nearest defibrillator based on user location. Direct user towards defibrilator.
+Create an app that finds nearest defibrillator based on user location. Direct user towards defibrillator.
 ​
 ### Motivation
 ​
@@ -10,7 +10,7 @@ Create an app that finds nearest defibrillator based on user location. Direct us
 [Source] (https://www.defibshop.co.uk/facts-and-figures)
 ​
 ### User Stories/Requirements
-​
+​```
 >As a user I want to know the address of the nearest defibrillator and how long it will take me to  git get there.
 ​
 >As a user I would like a button to dial 999 automatically.
@@ -22,6 +22,7 @@ Create an app that finds nearest defibrillator based on user location. Direct us
 >As a user I would like to see the what three words functionality in and use the what 3 words to    inform emergency services.
 ​
 >As a user I would like CPR instructions on the site with a video embedded.
+```
 ​
 ​
 ## Build Status
@@ -61,19 +62,19 @@ To access our project via [Heroku](https://reviveyou.herokuapp.com/)
 ​
 ### Interface Design
 ​
-..*All Application component render on screen in a responsive mode and are usable across modern       Desktop, Tablet and Phone broswers.
+..* All Application component render on screen in a responsive mode and are usable across modern Desktop, Tablet and Phone broswers.
 ​
 ### Application Functionality
 ​
-..*The application shows the list of Defibrilator around the user location and calculate the time     to reach them in fastest possible route.
+..* The application shows the list of defibrillator around the user location and calculate the time to reach them in fastest possible route.
 ​
-..*Users can add a defibrilator in the list by filling a form in website.
+..* Users can add a defibrillator in the list by filling a form in website.
 ​
 ### Map Marker
 ​
-..*The map displays all location by default.
+..* The map displays all location by default.
 ​
-..*Clicking a location displays unique information about the location and displays the list of        defibrilator within half a kilometer.
+..* Clicking a location displays unique information about the location and displays the list of defibrillator within half a kilometre.
 ​
 ### Asynchronous API Requests
 ​
@@ -82,7 +83,7 @@ To access our project via [Heroku](https://reviveyou.herokuapp.com/)
 ​
 ### Offline Use
 ​
-..* We are using locally stored data to show the location but Mongodb can be added as a database       store location for future purposes as it is integrated in our intial setup.
+..* We are using locally stored data to show the location but Mongodb can be added as a database store location for future purposes as it is integrated in our intial setup.
 ​
 ### Reference used
 ​
