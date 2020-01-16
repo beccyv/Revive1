@@ -19,7 +19,7 @@ Create an app that finds nearest defibrillator based on user location. Direct us
 ​
 >As a user I would like be able to contribute defibrillator locations to the website.
 ​
->As a user I would like to see the what three words functionality in and use the what 3 words to    inform emergency services.
+>As a user I would like to see the what three words functionality in and use the what 3 words to inform emergency services.
 ​
 >As a user I would like CPR instructions on the site with a video embedded.
 ```
