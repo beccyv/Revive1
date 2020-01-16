@@ -392,7 +392,7 @@ infoWindow = new google.maps.InfoWindow({
     what3words.api.convertTo3wa(pos).then(function(response) {
      var whatthree = response.words
      var whatthreeformatted = `<ul class="list-group">
-        <li class="list-group-item">${"Your what three words location:   " + whatthree}</li></ul>`;
+        <li class="list-group-item">${whatthree}</li></ul>`;
         document.getElementById('whatthreewordscapsule').innerHTML = whatthreeformatted;
   });
   }
@@ -414,7 +414,7 @@ infoWindow = new google.maps.InfoWindow({
 <!-- <script type="text/javascript" src="address.json"></script> -->
 
 
-  <div id ="whatthreewordscapsule" style = ></div>
+  <!-- <div id ="whatthreewordscapsule" style = "background:grey;" ></div> -->
 
 
     <div class="container">
@@ -430,7 +430,7 @@ infoWindow = new google.maps.InfoWindow({
             <p></p>
             <b class="emergency-call" style="font-size:19px;"><center>In an emergency click the phone icon to call 999<center></b>
             </br>
-            <p id="these3words_location"style="font-size:18px">If you don't know your location quote this location number ....to your 999 operator so they can find you quickly.</p>
+            <p id="these3words_location"style="font-size:18px">If you don't know your location quote this location number <b class="lead" id="whatthreewordscapsule" style="color:red; font-size:23px;"></b>  to your 999 operator so they can find you quickly.</p>
 
         </div><!-- End of column 1 in row -->
 
