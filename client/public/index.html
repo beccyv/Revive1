@@ -133,22 +133,50 @@
 var map, infoWindow;
 //1
 function initMap() {
-  //2
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -51.520161, lng: 51.520161},
-    zoom: 16
-  });
-  //1
-  //fetching json
+
+  //HTML loads - this function is callback for when the map data is ready
+  //try making this mapLoad()
+  //do need to call initMap somewhere?
+  //loading map with another callback
+  // const getProducts = async () => {
+  //   let res = await productService.getAll();
+  //   console.log(res);
+  //   setproducts(res);
+  // }
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
   fetch('address.json')
   .then(function(response){
     response.json().then (function(data){
+      mapLoad();
       for (i = 0; i < data.address.length; i++) {
         geocode(data.address[i].street);
         calcTime(data.address[i].street);
         }
     })
   })
+
+  function mapLoad(){
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -51.520161, lng: 51.520161},
+      zoom: 16
+    });
+  }
+
+  //2
+
+  // getPlaces();
+  //1
+  //fetching json
+  // function getPlaces(callback){
+
+  // }
 
 //example of adding to JSON file
         // for (var i=0; i<data.length; i++) {
@@ -246,32 +274,34 @@ function haversineDistance(latlngA, latlngB) {
             //without the setPanel, just see a line which represents the journey
             var time = result.routes[0].legs[0].duration.text
             var addressNearest = result.routes[0].legs[0].end_address
-            console.log(addressNearest)
-            console.log(time)
-            // LET'S SAY THAT WE HAVE A SIMPLE FLAT ARRAY
-            var data = [addressNearest, time];
+          })
+          }
+        else {
+            return distanceArray
+          }
+        });
+  }
+            // // LET'S SAY THAT WE HAVE A SIMPLE FLAT ARRAY
+            // var data = [addressNearest, time];
+            //
+            // // DRAW THE HTML TABLE
+            // var perrow =  2, // 2 items per row
+            //     html = "<table><tr>";
+            //
+            // // Loop through array and add table cells
+            // for (var i=0; i<data.length; i++) {
+            //   html += "<td>" + data[i] + "</td>";
+            //   // Break into next row
+            //   var next = i+1;
+            //   if (next%perrow==0 && next!=data.length) {
+            //     html += "</tr><tr>";
+            //   }
+            // }
+            // html += "</tr></table>";
+            //
+            // // ATTACH HTML TO CONTAINER
+            // document.getElementById("container").innerHTML = html;
 
-            // DRAW THE HTML TABLE
-            var perrow =  2, // 2 items per row
-                html = "<table><tr>";
-
-            // Loop through array and add table cells
-            for (var i=0; i<data.length; i++) {
-              html += "<td>" + data[i] + "</td>";
-              // Break into next row
-              var next = i+1;
-              if (next%perrow==0 && next!=data.length) {
-                html += "</tr><tr>";
-              }
-            }
-            html += "</tr></table>";
-
-            // ATTACH HTML TO CONTAINER
-            document.getElementById("container").innerHTML = html;
-          });
-        }
-      });
-    }
 
   //Marianne's code ended here
   //creating a waitrose variable with its location
@@ -374,7 +404,7 @@ function haversineDistance(latlngA, latlngB) {
         console.log(error)
       });
     }
-  }
+  })
 
   </script>
   <script async defer

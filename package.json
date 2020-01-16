@@ -1,10 +1,16 @@
 {
   "name": "Revive1",
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true
+  },
   "version": "1.0.0",
   "description": "Revive App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:unit": "jest",
+    "test:integration": "cypress run",
+    "test": "npm run test:integration && npm run test:unit",
     "client": "npm run start --prefix client",
     "server": "nodemon index.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
@@ -34,7 +40,9 @@
   },
   "devDependencies": {
     "concurrently": "^5.0.2",
+    "cypress": "^3.8.1",
     "dotenv": "^8.2.0",
+    "jest": "^24.9.0",
     "nodemon": "^2.0.2"
   }
 }
